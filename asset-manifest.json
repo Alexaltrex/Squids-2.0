@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Squids-2.0/static/css/main.3490f8e3.chunk.css",
-    "main.js": "/Squids-2.0/static/js/main.894ac75e.chunk.js",
-    "main.js.map": "/Squids-2.0/static/js/main.894ac75e.chunk.js.map",
+    "main.css": "/Squids-2.0/static/css/main.a6ee42ea.chunk.css",
+    "main.js": "/Squids-2.0/static/js/main.5c9ec2cd.chunk.js",
+    "main.js.map": "/Squids-2.0/static/js/main.5c9ec2cd.chunk.js.map",
     "runtime-main.js": "/Squids-2.0/static/js/runtime-main.a2041fa4.js",
     "runtime-main.js.map": "/Squids-2.0/static/js/runtime-main.a2041fa4.js.map",
     "static/css/2.a96a3fda.chunk.css": "/Squids-2.0/static/css/2.a96a3fda.chunk.css",
-    "static/js/2.6a71c854.chunk.js": "/Squids-2.0/static/js/2.6a71c854.chunk.js",
-    "static/js/2.6a71c854.chunk.js.map": "/Squids-2.0/static/js/2.6a71c854.chunk.js.map",
+    "static/js/2.2144b2c8.chunk.js": "/Squids-2.0/static/js/2.2144b2c8.chunk.js",
+    "static/js/2.2144b2c8.chunk.js.map": "/Squids-2.0/static/js/2.2144b2c8.chunk.js.map",
     "index.html": "/Squids-2.0/index.html",
     "static/css/2.a96a3fda.chunk.css.map": "/Squids-2.0/static/css/2.a96a3fda.chunk.css.map",
-    "static/css/main.3490f8e3.chunk.css.map": "/Squids-2.0/static/css/main.3490f8e3.chunk.css.map",
-    "static/js/2.6a71c854.chunk.js.LICENSE.txt": "/Squids-2.0/static/js/2.6a71c854.chunk.js.LICENSE.txt",
+    "static/css/main.a6ee42ea.chunk.css.map": "/Squids-2.0/static/css/main.a6ee42ea.chunk.css.map",
+    "static/js/2.2144b2c8.chunk.js.LICENSE.txt": "/Squids-2.0/static/js/2.2144b2c8.chunk.js.LICENSE.txt",
     "static/media/Anatoly-Hover.9362e553.png": "/Squids-2.0/static/media/Anatoly-Hover.9362e553.png",
     "static/media/Anatoly-Idle.5a44aa90.png": "/Squids-2.0/static/media/Anatoly-Idle.5a44aa90.png",
     "static/media/Dimi-Hover.852fd17e.png": "/Squids-2.0/static/media/Dimi-Hover.852fd17e.png",
@@ -24,8 +24,9 @@
     "static/media/Mod-Idle.b3848ce5.png": "/Squids-2.0/static/media/Mod-Idle.b3848ce5.png",
     "static/media/Theo-Hover.91aaacf0.png": "/Squids-2.0/static/media/Theo-Hover.91aaacf0.png",
     "static/media/Theo-idle.2f84ba90.png": "/Squids-2.0/static/media/Theo-idle.2f84ba90.png",
+    "static/media/burgerMenu2.module.scss": "/Squids-2.0/static/media/burger-menu-divider.dd9f474d.svg",
     "static/media/barrels.ceb21ad5.gif": "/Squids-2.0/static/media/barrels.ceb21ad5.gif",
-    "static/media/burgerMenu.module.scss": "/Squids-2.0/static/media/burger-menu-divider.dd9f474d.svg",
+    "static/media/burgerMenu.module.scss": "/Squids-2.0/static/media/burger-menu-back.c3e3a1e8.png",
     "static/media/app.module.scss": "/Squids-2.0/static/media/rain.6b796b57.gif",
     "static/media/female adventurer.57b0e45f.gif": "/Squids-2.0/static/media/female adventurer.57b0e45f.gif",
     "static/media/female astraunaut.35d25f6f.gif": "/Squids-2.0/static/media/female astraunaut.35d25f6f.gif",
@@ -57,8 +58,8 @@
   "entrypoints": [
     "static/js/runtime-main.a2041fa4.js",
     "static/css/2.a96a3fda.chunk.css",
-    "static/js/2.6a71c854.chunk.js",
-    "static/css/main.3490f8e3.chunk.css",
-    "static/js/main.894ac75e.chunk.js"
+    "static/js/2.2144b2c8.chunk.js",
+    "static/css/main.a6ee42ea.chunk.css",
+    "static/js/main.5c9ec2cd.chunk.js"
   ]
 }
