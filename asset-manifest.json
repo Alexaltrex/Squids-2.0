@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Squids-2.0/static/css/main.ee9f749c.chunk.css",
-    "main.js": "/Squids-2.0/static/js/main.ef987dd3.chunk.js",
-    "main.js.map": "/Squids-2.0/static/js/main.ef987dd3.chunk.js.map",
+    "main.css": "/Squids-2.0/static/css/main.08b2aa52.chunk.css",
+    "main.js": "/Squids-2.0/static/js/main.a9c3821e.chunk.js",
+    "main.js.map": "/Squids-2.0/static/js/main.a9c3821e.chunk.js.map",
     "runtime-main.js": "/Squids-2.0/static/js/runtime-main.a2041fa4.js",
     "runtime-main.js.map": "/Squids-2.0/static/js/runtime-main.a2041fa4.js.map",
     "static/css/2.a96a3fda.chunk.css": "/Squids-2.0/static/css/2.a96a3fda.chunk.css",
-    "static/js/2.95e0eba2.chunk.js": "/Squids-2.0/static/js/2.95e0eba2.chunk.js",
-    "static/js/2.95e0eba2.chunk.js.map": "/Squids-2.0/static/js/2.95e0eba2.chunk.js.map",
+    "static/js/2.9c2801c9.chunk.js": "/Squids-2.0/static/js/2.9c2801c9.chunk.js",
+    "static/js/2.9c2801c9.chunk.js.map": "/Squids-2.0/static/js/2.9c2801c9.chunk.js.map",
     "index.html": "/Squids-2.0/index.html",
     "static/css/2.a96a3fda.chunk.css.map": "/Squids-2.0/static/css/2.a96a3fda.chunk.css.map",
-    "static/css/main.ee9f749c.chunk.css.map": "/Squids-2.0/static/css/main.ee9f749c.chunk.css.map",
-    "static/js/2.95e0eba2.chunk.js.LICENSE.txt": "/Squids-2.0/static/js/2.95e0eba2.chunk.js.LICENSE.txt",
+    "static/css/main.08b2aa52.chunk.css.map": "/Squids-2.0/static/css/main.08b2aa52.chunk.css.map",
+    "static/js/2.9c2801c9.chunk.js.LICENSE.txt": "/Squids-2.0/static/js/2.9c2801c9.chunk.js.LICENSE.txt",
     "static/media/Anatoly-Hover.9362e553.png": "/Squids-2.0/static/media/Anatoly-Hover.9362e553.png",
     "static/media/Anatoly-Idle.5a44aa90.png": "/Squids-2.0/static/media/Anatoly-Idle.5a44aa90.png",
     "static/media/Dimi-Hover.852fd17e.png": "/Squids-2.0/static/media/Dimi-Hover.852fd17e.png",
@@ -41,6 +41,7 @@
     "static/media/minus-c.c00dccd8.svg": "/Squids-2.0/static/media/minus-c.c00dccd8.svg",
     "static/media/minus-d.ae217cf3.svg": "/Squids-2.0/static/media/minus-d.ae217cf3.svg",
     "static/media/minus-h.758362ce.svg": "/Squids-2.0/static/media/minus-h.758362ce.svg",
+    "static/media/nft.d40ead21.gif": "/Squids-2.0/static/media/nft.d40ead21.gif",
     "static/media/openSea-c.b9b0f2fe.svg": "/Squids-2.0/static/media/openSea-c.b9b0f2fe.svg",
     "static/media/openSea-d.bd5fafeb.svg": "/Squids-2.0/static/media/openSea-d.bd5fafeb.svg",
     "static/media/openSea-h.63e06748.svg": "/Squids-2.0/static/media/openSea-h.63e06748.svg",
@@ -58,8 +59,8 @@
   "entrypoints": [
     "static/js/runtime-main.a2041fa4.js",
     "static/css/2.a96a3fda.chunk.css",
-    "static/js/2.95e0eba2.chunk.js",
-    "static/css/main.ee9f749c.chunk.css",
-    "static/js/main.ef987dd3.chunk.js"
+    "static/js/2.9c2801c9.chunk.js",
+    "static/css/main.08b2aa52.chunk.css",
+    "static/js/main.a9c3821e.chunk.js"
   ]
 }
