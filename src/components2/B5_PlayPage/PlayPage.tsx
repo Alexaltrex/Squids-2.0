@@ -5,38 +5,30 @@ import btn from "../../assets/png/buttons/play/button.png";
 import {useState} from "react";
 import clsx from "clsx";
 import numberButton from "../../assets/png/buttons/numberButton.png";
+import {chatItems, leaderboardCards, playPageTabs} from "./constants";
+import {useFormik} from "formik";
+import buttonBack from "../../assets/png/buttons/numberButton.png";
 
-const tabs = [
-    "Leaderboard",
-    "chat"
-];
-
-const leaderboardCards = [
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-    {address: "0xD31...9c2b", score: 12345},
-];
+interface IValues {
+    message: string
+}
 
 
 export const PlayPage = () => {
     const [currentTab, setCurrentTab] = useState(0);
+
+    const initialValues: IValues = {
+        message: "",
+    }
+
+    const onSubmit = (values: IValues) => {
+        console.log(values.message)
+    }
+
+    const formik = useFormik({
+        initialValues,
+        onSubmit
+    });
 
     return (
         <div className={style.playPage}>
@@ -44,7 +36,12 @@ export const PlayPage = () => {
 
                 <div className={style.left}>
                     <div className={style.field}>
-                        <div className={style.fieldIcon}>{svgIcons.playPageField}</div>
+                        <div className={style.back}>{svgIcons.playPageField}</div>
+                        <iframe src=""
+                                frameBorder={0}
+                                src="http://www.youtube.com/embed/xDMP3i36naA"
+                                className={style.frame}
+                        />
                     </div>
                     <button className={style.playBtn}>
                         <img src={btn} alt=""/>
@@ -57,7 +54,7 @@ export const PlayPage = () => {
                     <div className={style.content}>
                         <div className={style.tabs}>
                             {
-                                tabs.map((tab, index) => (
+                                playPageTabs.map((tab, index) => (
                                     <button key={index}
                                             className={clsx({
                                                 [style.tab]: true,
@@ -102,9 +99,41 @@ export const PlayPage = () => {
 
                         {
                             currentTab === 1 && (
-                                <div className={style.chat}>
-                                    chat
-                                </div>
+                                <>
+                                    <div className={style.chat}>
+                                        {
+                                            chatItems.map(({nickname, message}, index) => (
+                                                <div key={index}
+                                                     className={style.chatItem}
+                                                >
+                                                    <div className={style.back}>
+                                                        {svgIcons.chatItemBack}
+                                                    </div>
+                                                    <p className={style.nickname}>{nickname}</p>
+                                                    <p className={style.message}>{message}</p>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+
+                                    <form className={style.form}
+                                          onSubmit={formik.handleSubmit}
+                                    >
+                                        <div className={style.back}>{svgIcons.chatForm}</div>
+                                        <div className={style.chatFormContent}>
+                                            <input type="text"
+                                                   placeholder="Write message"
+                                                   {...formik.getFieldProps('message')}
+                                            />
+                                            <button type="submit">
+                                                <img src={buttonBack} alt=""/>
+                                                {svgIcons.send}
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                    <div className={style.chatBlur}/>
+                                </>
                             )
                         }
 

@@ -11,7 +11,9 @@ import {HomePage} from "../../components2/B0_HomePage/HomePage";
 import { TournamentsPage } from '../../components2/B1_TournamentsPage/TournamentsPage';
 import {LootBoxesPage} from "../../components2/B2_LootBoxesPage/LootBoxesPage";
 import {ErrorPage} from "../../components2/B4_ErrorPage/ErrorPage";
-import {PlayPage} from "../../components2/B5_PlayPage/B5_PlayPage";
+import {PlayPage} from "../../components2/B5_PlayPage/PlayPage";
+import {TournamentPage} from "../../components2/B6_TournamentPage/TournamentPage";
+import {StakingPage} from "../../components2/B7_StakingPage/StakingPage";
 
 export const AppContainer = () => {
     AOS.init();
@@ -27,7 +29,8 @@ export const AppContainer = () => {
                         <Route path="loot" element={<LootBoxesPage/>}/>
                         <Route path="error" element={<ErrorPage/>}/>
                         <Route path="play" element={<PlayPage/>}/>
-
+                        <Route path="tournament" element={<TournamentPage/>}/>
+                        <Route path="stacking" element={<StakingPage/>}/>
                     </Route>
                 </Routes>
             </HashRouter>

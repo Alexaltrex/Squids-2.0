@@ -10,9 +10,10 @@ import {svgIcons} from "../../assets/svg/svgIcons";
 import {useAppDispatch} from "../../store/hooks";
 import { setLeaderboardModal, setModal } from "../../store/appSlice";
 import {useNavigate} from "react-router-dom";
+import {desktopBreakPoint} from "../../constants";
 
 export const TournamentsPage = () => {
-    const matchDesktop = useMediaQuery('(min-width:1440px)');
+    const matchDesktop = useMediaQuery(`(min-width:${desktopBreakPoint}px)`);
     const navigate = useNavigate();
 
     const cards = [
@@ -24,7 +25,7 @@ export const TournamentsPage = () => {
                 {title: "Participant", value: "5/500"},
             ],
             onClick: () => {
-                matchDesktop ? navigate("/app2/play") : navigate("/app2/error")
+                matchDesktop ? navigate("/app2/tournament") : navigate("/app2/error")
             }
         },
         {
@@ -35,7 +36,7 @@ export const TournamentsPage = () => {
                 {title: "Participant", value: "5/500"},
             ],
             onClick: () => {
-                matchDesktop ? navigate("/app2/play") : navigate("/app2/error")
+                matchDesktop ? navigate("/app2/tournament") : navigate("/app2/error")
             }
         },
     ];
