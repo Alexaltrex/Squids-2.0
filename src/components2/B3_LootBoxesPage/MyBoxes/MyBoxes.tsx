@@ -3,29 +3,15 @@ import * as React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import openMobile from "../../../assets/png/buttons/loot boxes - open/mobile.png";
 import openDesktop from "../../../assets/png/buttons/loot boxes - open/desktop.png";
-
-const boxes = [
-    {
-        label: "Common",
-        value: 10,
-    },
-    {
-        label: "Rare",
-        value: 5,
-    },
-    {
-        label: "Legendary",
-        value: 1,
-    },
-    {
-        label: "Epic",
-        value: 3,
-    },
-]
-
+import {boxes} from "../constants";
+import {useAppDispatch} from "../../../store/hooks";
+import { setLootBox } from "../../../store/appSlice";
+import {useNavigate} from "react-router-dom";
 
 export const MyBoxes = () => {
     const matchDesktop = useMediaQuery('(min-width:1440px)');
+    const dispatch = useAppDispatch();
+    const navigate = useNavigate();
 
     return (
         <div className={style.myBoxes}>
@@ -34,13 +20,18 @@ export const MyBoxes = () => {
 
             <div className={style.boxes}>
                 {
-                    boxes.map(({label, value}, index) => (
+                    boxes.map(({label, quality}, index) => (
                         <div className={style.box} key={index}>
                             <div className={style.top}>
                                 <p className={style.label}>{label}</p>
-                                <p className={style.value}>{value}</p>
+                                <p className={style.value}>{quality}</p>
                             </div>
-                            <button className={style.openBtn}>
+                            <button className={style.openBtn}
+                                    onClick={() => {
+                                        navigate('/app2/box')
+                                        dispatch(setLootBox(boxes[index]));
+                                    }}
+                            >
                                 <img src={matchDesktop ? openDesktop : openMobile}
                                      alt=""
                                      className={style.back}

@@ -3432,16 +3432,16 @@ export const svgIcons = {
     ),
     // LOOT BOXES
     lootBoxesCardMobile: (
-        <svg width="288" height="408" viewBox="0 0 288 408" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="288" height="348" transform="matrix(1 0 0 -1 0 378)" fill="#2A1428"/>
-            <rect x="30" y="398" width="228" height="10" fill="#180B12"/>
-            <rect x="20" y="378" width="248" height="20" fill="#2A1428"/>
-            <rect x="20" y="388" width="10" height="10" transform="rotate(-180 20 388)" fill="#180B12"/>
-            <rect x="30" y="398" width="10" height="10" transform="rotate(-180 30 398)" fill="#180B12"/>
-            <rect x="10" y="378" width="10" height="10" transform="rotate(-180 10 378)" fill="#180B12"/>
-            <rect width="10" height="10" transform="matrix(1 0 0 -1 268 388)" fill="#180B12"/>
-            <rect width="10" height="10" transform="matrix(1 0 0 -1 258 398)" fill="#180B12"/>
-            <rect width="10" height="10" transform="matrix(1 0 0 -1 278 378)" fill="#180B12"/>
+        <svg width="288" height="442" viewBox="0 0 288 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="288" height="382" transform="matrix(1 0 0 -1 0 412)" fill="#2A1428"/>
+            <rect x="30" y="432" width="228" height="10" fill="#180B12"/>
+            <rect x="20" y="412" width="248" height="20" fill="#2A1428"/>
+            <rect x="20" y="422" width="10" height="10" transform="rotate(-180 20 422)" fill="#180B12"/>
+            <rect x="30" y="432" width="10" height="10" transform="rotate(-180 30 432)" fill="#180B12"/>
+            <rect x="10" y="412" width="10" height="10" transform="rotate(-180 10 412)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 268 422)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 258 432)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 278 412)" fill="#180B12"/>
             <rect width="228" height="10" transform="matrix(1 0 0 -1 30 10)" fill="#2A1428"/>
             <rect width="248" height="10" transform="matrix(-1 0 0 1 268 10)" fill="#2A1428"/>
             <rect x="10" y="20" width="268" height="10" fill="#2A1428"/>
@@ -3866,12 +3866,18 @@ export const svgIcons = {
         <svg width="160" height="102" viewBox="0 0 160 102" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="32.4409" height="57.2963" transform="matrix(-1 0 0 1 38.7402 32.1111)" fill="#E5A730"/>
             <rect width="65.8268" height="19.5185" transform="matrix(-1 0 0 1 78.4238 12.5925)" fill="#FFBD3B"/>
-            <rect x="51.0254" y="95.7036" width="32.126" height="18.8889" transform="rotate(-180 51.0254 95.7036)" fill="#AF7403"/>
-            <rect x="57.3242" y="76.8147" width="6.29921" height="6.2963" transform="rotate(-180 57.3242 76.8147)" fill="#AF7403"/>
-            <rect x="153.701" y="83.1113" width="6.29921" height="44.7037" transform="rotate(-180 153.701 83.1113)" fill="#AF7403"/>
-            <rect x="147.402" y="89.7219" width="6.29921" height="44.7037" transform="rotate(-180 147.402 89.7219)" fill="#AF7403"/>
-            <rect x="141.104" y="95.7036" width="6.29921" height="44.7037" transform="rotate(-180 141.104 95.7036)" fill="#AF7403"/>
-            <rect x="134.803" y="89.4075" width="6.2963" height="19.5276" transform="rotate(90 134.803 89.4075)" fill="#AF7403"/>
+            <rect x="51.0254" y="95.7036" width="32.126" height="18.8889" transform="rotate(-180 51.0254 95.7036)"
+                  fill="#AF7403"/>
+            <rect x="57.3242" y="76.8147" width="6.29921" height="6.2963" transform="rotate(-180 57.3242 76.8147)"
+                  fill="#AF7403"/>
+            <rect x="153.701" y="83.1113" width="6.29921" height="44.7037" transform="rotate(-180 153.701 83.1113)"
+                  fill="#AF7403"/>
+            <rect x="147.402" y="89.7219" width="6.29921" height="44.7037" transform="rotate(-180 147.402 89.7219)"
+                  fill="#AF7403"/>
+            <rect x="141.104" y="95.7036" width="6.29921" height="44.7037" transform="rotate(-180 141.104 95.7036)"
+                  fill="#AF7403"/>
+            <rect x="134.803" y="89.4075" width="6.2963" height="19.5276" transform="rotate(90 134.803 89.4075)"
+                  fill="#AF7403"/>
             <rect width="65.8268" height="6.2963" transform="matrix(-1 0 0 1 104.566 6.29614)" fill="#FFBD3B"/>
             <rect width="32.4409" height="57.9259" transform="matrix(-1 0 0 1 70.8652 12.5925)" fill="#E5A730"/>
             <rect width="32.4409" height="6.2963" transform="matrix(-1 0 0 1 51.3398 25.8147)" fill="#E5A730"/>
@@ -3899,7 +3905,8 @@ export const svgIcons = {
             <rect x="115.906" y="25.8147" width="12.5984" height="12.5926" fill="#2E66AD"/>
             <rect x="128.504" y="38.4077" width="12.5984" height="12.5926" fill="#C90100"/>
             <rect x="115.906" y="51" width="12.5984" height="12.5926" fill="#029405"/>
-            <rect x="44.4082" y="25.8147" width="38.4074" height="12.5984" transform="rotate(90 44.4082 25.8147)" fill="#472F00"/>
+            <rect x="44.4082" y="25.8147" width="38.4074" height="12.5984" transform="rotate(90 44.4082 25.8147)"
+                  fill="#472F00"/>
             <rect x="63.9375" y="57.926" width="13.2283" height="6.2963" fill="#472F00"/>
             <rect x="12.5977" y="89.4075" width="6.29921" height="6.2963" fill="#472F00"/>
             <rect width="6.29921" height="6.2963" transform="matrix(-1 0 0 1 147.402 89.4075)" fill="#472F00"/>
@@ -3911,6 +3918,453 @@ export const svgIcons = {
             <rect width="19.8425" height="6.2963" transform="matrix(-1 0 0 1 141.104 6.29614)" fill="#472F00"/>
             <rect x="38.7402" width="82.5197" height="6.2963" fill="#472F00"/>
         </svg>
-
     ),
+    // CLOUDS
+    cloud0: (
+        <svg width="640" height="198" viewBox="0 0 640 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M290 0H280V10H290V0Z" fill="#4A3351"/>
+            <path d="M300 0H290V10H300V0Z" fill="#4A3351"/>
+            <path d="M310 0H300V10H310V0Z" fill="#4A3351"/>
+            <path d="M30 10H20V20H30V10Z" fill="#4A3351"/>
+            <path d="M40 10H30V20H40V10Z" fill="#4A3351"/>
+            <path d="M50 10H40V20H50V10Z" fill="#4A3351"/>
+            <path d="M60 10H50V20H60V10Z" fill="#4A3351"/>
+            <path d="M70 10H60V20H70V10Z" fill="#4A3351"/>
+            <path d="M80 10H70V20H80V10Z" fill="#4A3351"/>
+            <path d="M90 10H80V20H90V10Z" fill="#4A3351"/>
+            <path d="M100 10H90V20H100V10Z" fill="#4A3351"/>
+            <path d="M110 10H100V20H110V10Z" fill="#4A3351"/>
+            <path d="M120 10H110V20H120V10Z" fill="#4A3351"/>
+            <path d="M130 10H120V20H130V10Z" fill="#4A3351"/>
+            <path d="M140 10H130V20H140V10Z" fill="#4A3351"/>
+            <path d="M150 10H140V20H150V10Z" fill="#4A3351"/>
+            <path d="M160 10H150V20H160V10Z" fill="#4A3351"/>
+            <path d="M170 10H160V20H170V10Z" fill="#4A3351"/>
+            <path d="M180 10H170V20H180V10Z" fill="#4A3351"/>
+            <path d="M190 10H180V20H190V10Z" fill="#4A3351"/>
+            <path d="M200 10H190V20H200V10Z" fill="#4A3351"/>
+            <path d="M210 10H200V20H210V10Z" fill="#4A3351"/>
+            <path d="M220 10H210V20H220V10Z" fill="#4A3351"/>
+            <path d="M230 10H220V20H230V10Z" fill="#4A3351"/>
+            <path d="M240 10H230V20H240V10Z" fill="#4A3351"/>
+            <path d="M250 10H240V20H250V10Z" fill="#4A3351"/>
+            <path d="M260 10H250V20H260V10Z" fill="#4A3351"/>
+            <path d="M10 20H0V30H10V20Z" fill="#4A3351"/>
+            <path d="M20 20H10V30H20V20Z" fill="#4A3351"/>
+            <path d="M30 20H20V30H30V20Z" fill="#4A3351"/>
+            <path d="M40 20H30V30H40V20Z" fill="#4A3351"/>
+            <path d="M50 20H40V30H50V20Z" fill="#4A3351"/>
+            <path d="M60 20H50V30H60V20Z" fill="#4A3351"/>
+            <path d="M70 20H60V30H70V20Z" fill="#4A3351"/>
+            <path d="M80 20H70V30H80V20Z" fill="#4A3351"/>
+            <path d="M90 20H80V30H90V20Z" fill="#4A3351"/>
+            <path d="M100 20H90V30H100V20Z" fill="#4A3351"/>
+            <path d="M110 20H100V30H110V20Z" fill="#4A3351"/>
+            <path d="M120 20H110V30H120V20Z" fill="#4A3351"/>
+            <path d="M130 20H120V30H130V20Z" fill="#4A3351"/>
+            <path d="M140 20H130V30H140V20Z" fill="#4A3351"/>
+            <path d="M150 20H140V30H150V20Z" fill="#4A3351"/>
+            <path d="M160 20H150V30H160V20Z" fill="#4A3351"/>
+            <path d="M170 20H160V30H170V20Z" fill="#4A3351"/>
+            <path d="M180 20H170V30H180V20Z" fill="#4A3351"/>
+            <path d="M190 20H180V30H190V20Z" fill="#4A3351"/>
+            <path d="M200 20H190V30H200V20Z" fill="#4A3351"/>
+            <path d="M210 20H200V30H210V20Z" fill="#4A3351"/>
+            <path d="M220 20H210V30H220V20Z" fill="#4A3351"/>
+            <path d="M230 20H220V30H230V20Z" fill="#4A3351"/>
+            <path d="M240 20H230V30H240V20Z" fill="#4A3351"/>
+            <path d="M250 20H240V30H250V20Z" fill="#4A3351"/>
+            <path d="M260 20H250V30H260V20Z" fill="#4A3351"/>
+            <path d="M610 20H600V30H610V20Z" fill="#4A3351"/>
+            <path d="M620 20H610V30H620V20Z" fill="#4A3351"/>
+            <path d="M630 20H620V30H630V20Z" fill="#4A3351"/>
+            <path d="M640 20H630V30H640V20Z" fill="#4A3351"/>
+            <path d="M10 30H0V40H10V30Z" fill="#4A3351"/>
+            <path d="M20 30H10V40H20V30Z" fill="#4A3351"/>
+            <path d="M30 30H20V40H30V30Z" fill="#4A3351"/>
+            <path d="M40 30H30V40H40V30Z" fill="#4A3351"/>
+            <path d="M50 30H40V40H50V30Z" fill="#4A3351"/>
+            <path d="M60 30H50V40H60V30Z" fill="#4A3351"/>
+            <path d="M70 30H60V40H70V30Z" fill="#4A3351"/>
+            <path d="M80 30H70V40H80V30Z" fill="#4A3351"/>
+            <path d="M90 30H80V40H90V30Z" fill="#4A3351"/>
+            <path d="M100 30H90V40H100V30Z" fill="#4A3351"/>
+            <path d="M110 30H100V40H110V30Z" fill="#4A3351"/>
+            <path d="M120 30H110V40H120V30Z" fill="#4A3351"/>
+            <path d="M130 30H120V40H130V30Z" fill="#4A3351"/>
+            <path d="M140 30H130V40H140V30Z" fill="#4A3351"/>
+            <path d="M150 30H140V40H150V30Z" fill="#4A3351"/>
+            <path d="M160 30H150V40H160V30Z" fill="#4A3351"/>
+            <path d="M170 30H160V40H170V30Z" fill="#4A3351"/>
+            <path d="M180 30H170V40H180V30Z" fill="#4A3351"/>
+            <path d="M600 30H590V40H600V30Z" fill="#4A3351"/>
+            <path d="M610 30H600V40H610V30Z" fill="#4A3351"/>
+            <path d="M630 30H620V40H630V30Z" fill="#4A3351"/>
+            <path d="M640 30H630V40H640V30Z" fill="#4A3351"/>
+            <path d="M20 40H10V50H20V40Z" fill="#4A3351"/>
+            <path d="M30 40H20V50H30V40Z" fill="#4A3351"/>
+            <path d="M40 40H30V50H40V40Z" fill="#4A3351"/>
+            <path d="M50 40H40V50H50V40Z" fill="#4A3351"/>
+            <path d="M60 40H50V50H60V40Z" fill="#4A3351"/>
+            <path d="M70 40H60V50H70V40Z" fill="#4A3351"/>
+            <path d="M80 40H70V50H80V40Z" fill="#4A3351"/>
+            <path d="M90 40H80V50H90V40Z" fill="#4A3351"/>
+            <path d="M100 40H90V50H100V40Z" fill="#4A3351"/>
+            <path d="M110 40H100V50H110V40Z" fill="#4A3351"/>
+            <path d="M120 40H110V50H120V40Z" fill="#4A3351"/>
+            <path d="M130 40H120V50H130V40Z" fill="#4A3351"/>
+            <path d="M140 40H130V50H140V40Z" fill="#4A3351"/>
+            <path d="M150 40H140V50H150V40Z" fill="#4A3351"/>
+            <path d="M630 40H620V50H630V40Z" fill="#4A3351"/>
+            <path d="M640 40H630V50H640V40Z" fill="#4A3351"/>
+            <path d="M30 50H20V60H30V50Z" fill="#4A3351"/>
+            <path d="M40 50H30V60H40V50Z" fill="#4A3351"/>
+            <path d="M50 50H40V60H50V50Z" fill="#4A3351"/>
+            <path d="M60 50H50V60H60V50Z" fill="#4A3351"/>
+            <path d="M70 50H60V60H70V50Z" fill="#4A3351"/>
+            <path d="M80 50H70V60H80V50Z" fill="#4A3351"/>
+            <path d="M90 50H80V60H90V50Z" fill="#4A3351"/>
+            <path d="M100 50H90V60H100V50Z" fill="#4A3351"/>
+            <path d="M110 50H100V60H110V50Z" fill="#4A3351"/>
+            <path d="M120 50H110V60H120V50Z" fill="#4A3351"/>
+            <path d="M640 50H630V60H640V50Z" fill="#4A3351"/>
+            <path d="M410 150H400V160H410V150Z" fill="#4A3351"/>
+            <path d="M420 150H410V160H420V150Z" fill="#4A3351"/>
+            <path d="M430 150H420V160H430V150Z" fill="#4A3351"/>
+            <path d="M480 150H470V160H480V150Z" fill="#4A3351"/>
+            <path d="M490 150H480V160H490V150Z" fill="#4A3351"/>
+            <path d="M500 150H490V160H500V150Z" fill="#4A3351"/>
+            <path d="M510 150H500V160H510V150Z" fill="#4A3351"/>
+            <path d="M370 160H360V170H370V160Z" fill="#4A3351"/>
+            <path d="M380 160H370V170H380V160Z" fill="#4A3351"/>
+            <path d="M390 160H380V170H390V160Z" fill="#4A3351"/>
+            <path d="M400 160H390V170H400V160Z" fill="#4A3351"/>
+            <path d="M410 160H400V170H410V160Z" fill="#4A3351"/>
+            <path d="M420 160H410V170H420V160Z" fill="#4A3351"/>
+            <path d="M430 160H420V170H430V160Z" fill="#4A3351"/>
+            <path d="M440 160H430V170H440V160Z" fill="#4A3351"/>
+            <path d="M450 160H440V170H450V160Z" fill="#4A3351"/>
+            <path d="M460 160H450V170H460V160Z" fill="#4A3351"/>
+            <path d="M470 160H460V170H470V160Z" fill="#4A3351"/>
+            <path d="M480 160H470V170H480V160Z" fill="#4A3351"/>
+            <path d="M490 160H480V170H490V160Z" fill="#4A3351"/>
+            <path d="M290 170H280V180H290V170Z" fill="#4A3351"/>
+            <path d="M300 170H290V180H300V170Z" fill="#4A3351"/>
+            <path d="M310 170H300V180H310V170Z" fill="#4A3351"/>
+            <path d="M320 170H310V180H320V170Z" fill="#4A3351"/>
+            <path d="M330 170H320V180H330V170Z" fill="#4A3351"/>
+            <path d="M340 170H330V180H340V170Z" fill="#4A3351"/>
+            <path d="M350 170H340V180H350V170Z" fill="#4A3351"/>
+            <path d="M360 170H350V180H360V170Z" fill="#4A3351"/>
+            <path d="M370 170H360V180H370V170Z" fill="#4A3351"/>
+            <path d="M380 170H370V180H380V170Z" fill="#4A3351"/>
+            <path d="M390 170H380V180H390V170Z" fill="#4A3351"/>
+            <path d="M400 170H390V180H400V170Z" fill="#4A3351"/>
+            <path d="M410 170H400V180H410V170Z" fill="#4A3351"/>
+            <path d="M420 170H410V180H420V170Z" fill="#4A3351"/>
+        </svg>
+    ),
+    cloud1: (
+        <svg width="329" height="118" viewBox="0 0 329 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2092_22744)">
+                <path d="M170 22H160V32H170V22Z" fill="#4A3351"/>
+                <path d="M180 22H170V32H180V22Z" fill="#4A3351"/>
+                <path d="M190 22H180V32H190V22Z" fill="#4A3351"/>
+                <path d="M200 22H190V32H200V22Z" fill="#4A3351"/>
+                <path d="M210 22H200V32H210V22Z" fill="#4A3351"/>
+                <path d="M220 22H210V32H220V22Z" fill="#4A3351"/>
+                <path d="M160 32H150V42H160V32Z" fill="#4A3351"/>
+                <path d="M170 32H160V42H170V32Z" fill="#4A3351"/>
+                <path d="M180 32H170V42H180V32Z" fill="#4A3351"/>
+                <path d="M190 32H180V42H190V32Z" fill="#4A3351"/>
+                <path d="M200 32H190V42H200V32Z" fill="#4A3351"/>
+                <path d="M210 32H200V42H210V32Z" fill="#4A3351"/>
+                <path d="M220 32H210V42H220V32Z" fill="#4A3351"/>
+                <path d="M230 32H220V42H230V32Z" fill="#4A3351"/>
+                <path d="M240 32H230V42H240V32Z" fill="#4A3351"/>
+                <path d="M140 42H130V52H140V42Z" fill="#4A3351"/>
+                <path d="M150 42H140V52H150V42Z" fill="#4A3351"/>
+                <path d="M160 42H150V52H160V42Z" fill="#4A3351"/>
+                <path d="M170 42H160V52H170V42Z" fill="#4A3351"/>
+                <path d="M180 42H170V52H180V42Z" fill="#4A3351"/>
+                <path d="M190 42H180V52H190V42Z" fill="#4A3351"/>
+                <path d="M200 42H190V52H200V42Z" fill="#4A3351"/>
+                <path d="M210 42H200V52H210V42Z" fill="#4A3351"/>
+                <path d="M220 42H210V52H220V42Z" fill="#4A3351"/>
+                <path d="M230 42H220V52H230V42Z" fill="#4A3351"/>
+                <path d="M240 42H230V52H240V42Z" fill="#4A3351"/>
+                <path d="M250 42H240V52H250V42Z" fill="#4A3351"/>
+                <path d="M140 52H130V62H140V52Z" fill="#4A3351"/>
+                <path d="M150 52H140V62H150V52Z" fill="#4A3351"/>
+                <path d="M160 52H150V62H160V52Z" fill="#4A3351"/>
+                <path d="M170 52H160V62H170V52Z" fill="#4A3351"/>
+                <path d="M180 52H170V62H180V52Z" fill="#4A3351"/>
+                <path d="M190 52H180V62H190V52Z" fill="#4A3351"/>
+                <path d="M200 52H190V62H200V52Z" fill="#4A3351"/>
+                <path d="M210 52H200V62H210V52Z" fill="#4A3351"/>
+                <path d="M220 52H210V62H220V52Z" fill="#4A3351"/>
+                <path d="M230 52H220V62H230V52Z" fill="#4A3351"/>
+                <path d="M240 52H230V62H240V52Z" fill="#4A3351"/>
+                <path d="M250 52H240V62H250V52Z" fill="#4A3351"/>
+                <path d="M90 62H80V72H90V62Z" fill="#4A3351"/>
+                <path d="M100 62H90V72H100V62Z" fill="#4A3351"/>
+                <path d="M130 62H120V72H130V62Z" fill="#4A3351"/>
+                <path d="M140 62H130V72H140V62Z" fill="#4A3351"/>
+                <path d="M150 62H140V72H150V62Z" fill="#4A3351"/>
+                <path d="M160 62H150V72H160V62Z" fill="#4A3351"/>
+                <path d="M170 62H160V72H170V62Z" fill="#4A3351"/>
+                <path d="M180 62H170V72H180V62Z" fill="#4A3351"/>
+                <path d="M190 62H180V72H190V62Z" fill="#4A3351"/>
+                <path d="M200 62H190V72H200V62Z" fill="#4A3351"/>
+                <path d="M210 62H200V72H210V62Z" fill="#4A3351"/>
+                <path d="M220 62H210V72H220V62Z" fill="#4A3351"/>
+                <path d="M230 62H220V72H230V62Z" fill="#4A3351"/>
+                <path d="M240 62H230V72H240V62Z" fill="#4A3351"/>
+                <path d="M250 62H240V72H250V62Z" fill="#4A3351"/>
+                <path d="M270 62H260V72H270V62Z" fill="#4A3351"/>
+                <path d="M80 72H70V82H80V72Z" fill="#4A3351"/>
+                <path d="M90 72H80V82H90V72Z" fill="#4A3351"/>
+                <path d="M100 72H90V82H100V72Z" fill="#4A3351"/>
+                <path d="M110 72H100V82H110V72Z" fill="#4A3351"/>
+                <path d="M120 72H110V82H120V72Z" fill="#4A3351"/>
+                <path d="M130 72H120V82H130V72Z" fill="#4A3351"/>
+                <path d="M140 72H130V82H140V72Z" fill="#4A3351"/>
+                <path d="M150 72H140V82H150V72Z" fill="#4A3351"/>
+                <path d="M160 72H150V82H160V72Z" fill="#4A3351"/>
+                <path d="M170 72H160V82H170V72Z" fill="#4A3351"/>
+                <path d="M180 72H170V82H180V72Z" fill="#4A3351"/>
+                <path d="M190 72H180V82H190V72Z" fill="#4A3351"/>
+                <path d="M200 72H190V82H200V72Z" fill="#4A3351"/>
+                <path d="M210 72H200V82H210V72Z" fill="#4A3351"/>
+                <path d="M220 72H210V82H220V72Z" fill="#4A3351"/>
+                <path d="M230 72H220V82H230V72Z" fill="#4A3351"/>
+                <path d="M240 72H230V82H240V72Z" fill="#4A3351"/>
+                <path d="M250 72H240V82H250V72Z" fill="#4A3351"/>
+                <path d="M260 72H250V82H260V72Z" fill="#4A3351"/>
+                <path d="M270 72H260V82H270V72Z" fill="#4A3351"/>
+                <path d="M280 72H270V82H280V72Z" fill="#4A3351"/>
+                <path d="M290 72H280V82H290V72Z" fill="#4A3351"/>
+                <path d="M70 82H60V92H70V82Z" fill="#4A3351"/>
+                <path d="M80 82H70V92H80V82Z" fill="#4A3351"/>
+                <path d="M90 82H80V92H90V82Z" fill="#4A3351"/>
+                <path d="M100 82H90V92H100V82Z" fill="#4A3351"/>
+                <path d="M110 82H100V92H110V82Z" fill="#4A3351"/>
+                <path d="M120 82H110V92H120V82Z" fill="#4A3351"/>
+                <path d="M130 82H120V92H130V82Z" fill="#4A3351"/>
+                <path d="M140 82H130V92H140V82Z" fill="#4A3351"/>
+                <path d="M150 82H140V92H150V82Z" fill="#4A3351"/>
+                <path d="M160 82H150V92H160V82Z" fill="#4A3351"/>
+                <path d="M170 82H160V92H170V82Z" fill="#4A3351"/>
+                <path d="M180 82H170V92H180V82Z" fill="#4A3351"/>
+                <path d="M190 82H180V92H190V82Z" fill="#4A3351"/>
+                <path d="M200 82H190V92H200V82Z" fill="#4A3351"/>
+                <path d="M210 82H200V92H210V82Z" fill="#4A3351"/>
+                <path d="M220 82H210V92H220V82Z" fill="#4A3351"/>
+                <path d="M230 82H220V92H230V82Z" fill="#4A3351"/>
+                <path d="M240 82H230V92H240V82Z" fill="#4A3351"/>
+                <path d="M250 82H240V92H250V82Z" fill="#4A3351"/>
+                <path d="M260 82H250V92H260V82Z" fill="#4A3351"/>
+                <path d="M270 82H260V92H270V82Z" fill="#4A3351"/>
+                <path d="M280 82H270V92H280V82Z" fill="#4A3351"/>
+                <path d="M290 82H280V92H290V82Z" fill="#4A3351"/>
+                <path d="M300 82H290V92H300V82Z" fill="#4A3351"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_2092_22744">
+                    <rect width="329" height="118" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+    ),
+    cloud2: (
+        <svg width="329" height="118" viewBox="0 0 329 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2092_22333)">
+                <path d="M159 22H169V32H159V22Z" fill="#4A3351"/>
+                <path d="M149 22H159V32H149V22Z" fill="#4A3351"/>
+                <path d="M139 22H149V32H139V22Z" fill="#4A3351"/>
+                <path d="M129 22H139V32H129V22Z" fill="#4A3351"/>
+                <path d="M119 22H129V32H119V22Z" fill="#4A3351"/>
+                <path d="M109 22H119V32H109V22Z" fill="#4A3351"/>
+                <path d="M169 32H179V42H169V32Z" fill="#4A3351"/>
+                <path d="M159 32H169V42H159V32Z" fill="#4A3351"/>
+                <path d="M149 32H159V42H149V32Z" fill="#4A3351"/>
+                <path d="M139 32H149V42H139V32Z" fill="#4A3351"/>
+                <path d="M129 32H139V42H129V32Z" fill="#4A3351"/>
+                <path d="M119 32H129V42H119V32Z" fill="#4A3351"/>
+                <path d="M109 32H119V42H109V32Z" fill="#4A3351"/>
+                <path d="M99 32H109V42H99V32Z" fill="#4A3351"/>
+                <path d="M89 32H99V42H89V32Z" fill="#4A3351"/>
+                <path d="M189 42H199V52H189V42Z" fill="#4A3351"/>
+                <path d="M179 42H189V52H179V42Z" fill="#4A3351"/>
+                <path d="M169 42H179V52H169V42Z" fill="#4A3351"/>
+                <path d="M159 42H169V52H159V42Z" fill="#4A3351"/>
+                <path d="M149 42H159V52H149V42Z" fill="#4A3351"/>
+                <path d="M139 42H149V52H139V42Z" fill="#4A3351"/>
+                <path d="M129 42H139V52H129V42Z" fill="#4A3351"/>
+                <path d="M119 42H129V52H119V42Z" fill="#4A3351"/>
+                <path d="M109 42H119V52H109V42Z" fill="#4A3351"/>
+                <path d="M99 42H109V52H99V42Z" fill="#4A3351"/>
+                <path d="M89 42H99V52H89V42Z" fill="#4A3351"/>
+                <path d="M79 42H89V52H79V42Z" fill="#4A3351"/>
+                <path d="M189 52H199V62H189V52Z" fill="#4A3351"/>
+                <path d="M179 52H189V62H179V52Z" fill="#4A3351"/>
+                <path d="M169 52H179V62H169V52Z" fill="#4A3351"/>
+                <path d="M159 52H169V62H159V52Z" fill="#4A3351"/>
+                <path d="M149 52H159V62H149V52Z" fill="#4A3351"/>
+                <path d="M139 52H149V62H139V52Z" fill="#4A3351"/>
+                <path d="M129 52H139V62H129V52Z" fill="#4A3351"/>
+                <path d="M119 52H129V62H119V52Z" fill="#4A3351"/>
+                <path d="M109 52H119V62H109V52Z" fill="#4A3351"/>
+                <path d="M99 52H109V62H99V52Z" fill="#4A3351"/>
+                <path d="M89 52H99V62H89V52Z" fill="#4A3351"/>
+                <path d="M79 52H89V62H79V52Z" fill="#4A3351"/>
+                <path d="M239 62H249V72H239V62Z" fill="#4A3351"/>
+                <path d="M229 62H239V72H229V62Z" fill="#4A3351"/>
+                <path d="M199 62H209V72H199V62Z" fill="#4A3351"/>
+                <path d="M189 62H199V72H189V62Z" fill="#4A3351"/>
+                <path d="M179 62H189V72H179V62Z" fill="#4A3351"/>
+                <path d="M169 62H179V72H169V62Z" fill="#4A3351"/>
+                <path d="M159 62H169V72H159V62Z" fill="#4A3351"/>
+                <path d="M149 62H159V72H149V62Z" fill="#4A3351"/>
+                <path d="M139 62H149V72H139V62Z" fill="#4A3351"/>
+                <path d="M129 62H139V72H129V62Z" fill="#4A3351"/>
+                <path d="M119 62H129V72H119V62Z" fill="#4A3351"/>
+                <path d="M109 62H119V72H109V62Z" fill="#4A3351"/>
+                <path d="M99 62H109V72H99V62Z" fill="#4A3351"/>
+                <path d="M89 62H99V72H89V62Z" fill="#4A3351"/>
+                <path d="M79 62H89V72H79V62Z" fill="#4A3351"/>
+                <path d="M59 62H69V72H59V62Z" fill="#4A3351"/>
+                <path d="M249 72H259V82H249V72Z" fill="#4A3351"/>
+                <path d="M239 72H249V82H239V72Z" fill="#4A3351"/>
+                <path d="M229 72H239V82H229V72Z" fill="#4A3351"/>
+                <path d="M219 72H229V82H219V72Z" fill="#4A3351"/>
+                <path d="M209 72H219V82H209V72Z" fill="#4A3351"/>
+                <path d="M199 72H209V82H199V72Z" fill="#4A3351"/>
+                <path d="M189 72H199V82H189V72Z" fill="#4A3351"/>
+                <path d="M179 72H189V82H179V72Z" fill="#4A3351"/>
+                <path d="M169 72H179V82H169V72Z" fill="#4A3351"/>
+                <path d="M159 72H169V82H159V72Z" fill="#4A3351"/>
+                <path d="M149 72H159V82H149V72Z" fill="#4A3351"/>
+                <path d="M139 72H149V82H139V72Z" fill="#4A3351"/>
+                <path d="M129 72H139V82H129V72Z" fill="#4A3351"/>
+                <path d="M119 72H129V82H119V72Z" fill="#4A3351"/>
+                <path d="M109 72H119V82H109V72Z" fill="#4A3351"/>
+                <path d="M99 72H109V82H99V72Z" fill="#4A3351"/>
+                <path d="M89 72H99V82H89V72Z" fill="#4A3351"/>
+                <path d="M79 72H89V82H79V72Z" fill="#4A3351"/>
+                <path d="M69 72H79V82H69V72Z" fill="#4A3351"/>
+                <path d="M59 72H69V82H59V72Z" fill="#4A3351"/>
+                <path d="M49 72H59V82H49V72Z" fill="#4A3351"/>
+                <path d="M39 72H49V82H39V72Z" fill="#4A3351"/>
+                <path d="M259 82H269V92H259V82Z" fill="#4A3351"/>
+                <path d="M249 82H259V92H249V82Z" fill="#4A3351"/>
+                <path d="M239 82H249V92H239V82Z" fill="#4A3351"/>
+                <path d="M229 82H239V92H229V82Z" fill="#4A3351"/>
+                <path d="M219 82H229V92H219V82Z" fill="#4A3351"/>
+                <path d="M209 82H219V92H209V82Z" fill="#4A3351"/>
+                <path d="M199 82H209V92H199V82Z" fill="#4A3351"/>
+                <path d="M189 82H199V92H189V82Z" fill="#4A3351"/>
+                <path d="M179 82H189V92H179V82Z" fill="#4A3351"/>
+                <path d="M169 82H179V92H169V82Z" fill="#4A3351"/>
+                <path d="M159 82H169V92H159V82Z" fill="#4A3351"/>
+                <path d="M149 82H159V92H149V82Z" fill="#4A3351"/>
+                <path d="M139 82H149V92H139V82Z" fill="#4A3351"/>
+                <path d="M129 82H139V92H129V82Z" fill="#4A3351"/>
+                <path d="M119 82H129V92H119V82Z" fill="#4A3351"/>
+                <path d="M109 82H119V92H109V82Z" fill="#4A3351"/>
+                <path d="M99 82H109V92H99V82Z" fill="#4A3351"/>
+                <path d="M89 82H99V92H89V82Z" fill="#4A3351"/>
+                <path d="M79 82H89V92H79V82Z" fill="#4A3351"/>
+                <path d="M69 82H79V92H69V82Z" fill="#4A3351"/>
+                <path d="M59 82H69V92H59V82Z" fill="#4A3351"/>
+                <path d="M49 82H59V92H49V82Z" fill="#4A3351"/>
+                <path d="M39 82H49V92H39V82Z" fill="#4A3351"/>
+                <path d="M29 82H39V92H29V82Z" fill="#4A3351"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_2092_22333">
+                    <rect width="329" height="118" fill="white" transform="matrix(-1 0 0 1 329 0)"/>
+                </clipPath>
+            </defs>
+        </svg>
+    ),
+    cloud3: (
+        <svg width="204" height="140" viewBox="0 0 204 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2092_22607)">
+                <path d="M76 50H86V60H76V50Z" fill="#4A3351"/>
+                <path d="M106 60H116V70H106V60Z" fill="#4A3351"/>
+                <path d="M96 60H106V70H96V60Z" fill="#4A3351"/>
+                <path d="M86 60H96V70H86V60Z" fill="#4A3351"/>
+                <path d="M76 60H86V70H76V60Z" fill="#4A3351"/>
+                <path d="M66 60H76V70H66V60Z" fill="#4A3351"/>
+                <path d="M56 60H66V70H56V60Z" fill="#4A3351"/>
+                <path d="M106 70H116V80H106V70Z" fill="#4A3351"/>
+                <path d="M96 70H106V80H96V70Z" fill="#4A3351"/>
+                <path d="M86 70H96V80H86V70Z" fill="#4A3351"/>
+                <path d="M76 70H86V80H76V70Z" fill="#4A3351"/>
+                <path d="M66 70H76V80H66V70Z" fill="#4A3351"/>
+                <path d="M56 70H66V80H56V70Z" fill="#4A3351"/>
+                <path d="M146 80H156V90H146V80Z" fill="#4A3351"/>
+                <path d="M136 80H146V90H136V80Z" fill="#4A3351"/>
+                <path d="M126 80H136V90H126V80Z" fill="#4A3351"/>
+                <path d="M116 80H126V90H116V80Z" fill="#4A3351"/>
+                <path d="M106 80H116V90H106V80Z" fill="#4A3351"/>
+                <path d="M96 80H106V90H96V80Z" fill="#4A3351"/>
+                <path d="M86 80H96V90H86V80Z" fill="#4A3351"/>
+                <path d="M76 80H86V90H76V80Z" fill="#4A3351"/>
+                <path d="M66 80H76V90H66V80Z" fill="#4A3351"/>
+                <path d="M56 80H66V90H56V80Z" fill="#4A3351"/>
+                <path d="M136 90H146V100H136V90Z" fill="#4A3351"/>
+                <path d="M126 90H136V100H126V90Z" fill="#4A3351"/>
+                <path d="M116 90H126V100H116V90Z" fill="#4A3351"/>
+                <path d="M106 90H116V100H106V90Z" fill="#4A3351"/>
+                <path d="M96 90H106V100H96V90Z" fill="#4A3351"/>
+                <path d="M86 90H96V100H86V90Z" fill="#4A3351"/>
+                <path d="M76 90H86V100H76V90Z" fill="#4A3351"/>
+                <path d="M66 90H76V100H66V90Z" fill="#4A3351"/>
+                <path d="M56 90H66V100H56V90Z" fill="#4A3351"/>
+                <path d="M46 90H56V100H46V90Z" fill="#4A3351"/>
+                <path d="M36 90H46V100H36V90Z" fill="#4A3351"/>
+                <path d="M26 90H36V100H26V90Z" fill="#4A3351"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_2092_22607">
+                    <rect width="204" height="140" fill="white" transform="matrix(-1 0 0 1 204 0)"/>
+                </clipPath>
+            </defs>
+        </svg>
+    ),
+    // LOOT BOX PAGE
+    lootBoxPageCardMobile: (
+        <svg width="288" height="517" viewBox="0 0 288 517" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="288" height="457" transform="matrix(1 0 0 -1 0 487)" fill="#2A1428"/>
+            <rect x="30" y="507" width="228" height="10" fill="#180B12"/>
+            <rect x="20" y="487" width="248" height="20" fill="#2A1428"/>
+            <rect x="20" y="497" width="10" height="10" transform="rotate(-180 20 497)" fill="#180B12"/>
+            <rect x="30" y="507" width="10" height="10" transform="rotate(-180 30 507)" fill="#180B12"/>
+            <rect x="10" y="487" width="10" height="10" transform="rotate(-180 10 487)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 268 497)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 258 507)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 278 487)" fill="#180B12"/>
+            <rect width="228" height="10" transform="matrix(1 0 0 -1 30 10)" fill="#2A1428"/>
+            <rect width="248" height="10" transform="matrix(1 0 0 -1 20 20)" fill="#2A1428"/>
+            <rect width="268" height="10" transform="matrix(1 0 0 -1 10 30)" fill="#2A1428"/>
+        </svg>
+    ),
+    lootBoxPageCardDesktop: (
+        <svg width="848" height="375" viewBox="0 0 848 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="848" height="315" transform="matrix(1 0 0 -1 0 345)" fill="#2A1428"/>
+            <rect x="30" y="365" width="788" height="10" fill="#180B12"/>
+            <rect x="20" y="345" width="808" height="20" fill="#2A1428"/>
+            <rect x="20" y="355" width="10" height="10" transform="rotate(-180 20 355)" fill="#180B12"/>
+            <rect x="30" y="365" width="10" height="10" transform="rotate(-180 30 365)" fill="#180B12"/>
+            <rect x="10" y="345" width="10" height="10" transform="rotate(-180 10 345)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 828 355)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 818 365)" fill="#180B12"/>
+            <rect width="10" height="10" transform="matrix(1 0 0 -1 838 345)" fill="#180B12"/>
+            <rect x="818" y="10" width="788" height="10" transform="rotate(-180 818 10)" fill="#2A1428"/>
+            <rect x="828" y="20" width="808" height="10" transform="rotate(-180 828 20)" fill="#2A1428"/>
+            <rect x="838" y="30" width="828" height="10" transform="rotate(-180 838 30)" fill="#2A1428"/>
+        </svg>
+    )
 }

@@ -37,8 +37,7 @@ export const PlayPage = () => {
                 <div className={style.left}>
                     <div className={style.field}>
                         <div className={style.back}>{svgIcons.playPageField}</div>
-                        <iframe src=""
-                                frameBorder={0}
+                        <iframe frameBorder={0}
                                 src="http://www.youtube.com/embed/xDMP3i36naA"
                                 className={style.frame}
                         />

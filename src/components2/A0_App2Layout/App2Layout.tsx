@@ -18,6 +18,8 @@ import {GameplayModal} from "../common/Modals/GameplayModal/GameplayModal";
 import {TournamentsWarningModal} from "../common/Modals/TournamentsWarningModal/TournamentsWarningModal";
 import {StakingNftErrorModal} from "../common/Modals/StakingNftErrorModal/StakingNftErrorModal";
 import {VoteModal} from "../common/Modals/VoteModal/VoteModal";
+import {svgIcons} from "../../assets/svg/svgIcons";
+import "./animations.scss";
 
 export const App2Layout = () => {
     const showChooseTheCoinModal = useAppSelector(selectShowChooseTheCoinModal);
@@ -44,7 +46,22 @@ export const App2Layout = () => {
             {stakingNftErrorModal && <StakingNftErrorModal/>}
             {voteModal && <VoteModal/>}
 
-            <Outlet/>
+            <div className={style.gradient}/>
+
+            <div className={style.clouds}>
+                <div className={clsx(style.cloud0, "cloudLeft")}>{svgIcons.cloud0}</div>
+                <div className={clsx(style.cloud1, "cloudRight")}>{svgIcons.cloud1}</div>
+                <div className={clsx(style.cloud2, "cloudRight")}>{svgIcons.cloud2}</div>
+                <div className={clsx(style.cloud3, "cloudLeft")}>{svgIcons.cloud3}</div>
+                <div className={clsx(style.cloud4, "cloudRight")}>{svgIcons.cloud3}</div>
+            </div>
+
+            <div className={style.rain}/>
+
+            <div className={style.outlet}>
+                <Outlet/>
+            </div>
+
 
             <Footer2/>
         </div>

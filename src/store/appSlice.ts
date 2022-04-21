@@ -1,6 +1,13 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {RootState} from "./store";
 
+export interface ILootBox {
+    label: string
+    price: number
+    quality: number
+    contain: {icon: string, name: string, percent: number}[],
+}
+
 export enum HomeModalEnum {
     dna = "dna",
     lives = "lives"
@@ -17,6 +24,7 @@ const initialState = {
     gameplayModal: false,
     stakingNftErrorModal: false,
     voteModal: false,
+    lootBox: null as null | ILootBox
 }
 
 type InitialStateType = typeof initialState
@@ -55,6 +63,9 @@ export const appSlice = createSlice({
         setVoteModal: (state, action: PayloadAction<boolean>) => {
             state.voteModal = action.payload
         },
+        setLootBox: (state, action: PayloadAction<ILootBox>) => {
+            state.lootBox = action.payload
+        },
     }
 })
 
@@ -69,7 +80,7 @@ export const {
     setGameplayModal,
     setStakingNftErrorModal,
     setVoteModal,
-
+    setLootBox,
 } = appSlice.actions
 
 export const selectBurgerOpen = (state: RootState) => state.app.burgerOpen;
@@ -82,5 +93,6 @@ export const selectNickname = (state: RootState) => state.app.nickname;
 export const selectGameplayModal = (state: RootState) => state.app.gameplayModal;
 export const selectStakingNftErrorModal = (state: RootState) => state.app.stakingNftErrorModal;
 export const selectVoteModal = (state: RootState) => state.app.voteModal;
+export const selectLootBox = (state: RootState) => state.app.lootBox;
 
 export const appReducer = appSlice.reducer

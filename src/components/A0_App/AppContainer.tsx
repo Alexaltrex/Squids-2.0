@@ -9,11 +9,12 @@ import {store} from "../../store/store";
 import {App2Layout} from "../../components2/A0_App2Layout/App2Layout";
 import {HomePage} from "../../components2/B0_HomePage/HomePage";
 import { TournamentsPage } from '../../components2/B1_TournamentsPage/TournamentsPage';
-import {LootBoxesPage} from "../../components2/B2_LootBoxesPage/LootBoxesPage";
-import {ErrorPage} from "../../components2/B4_ErrorPage/ErrorPage";
-import {PlayPage} from "../../components2/B5_PlayPage/PlayPage";
-import {TournamentPage} from "../../components2/B6_TournamentPage/TournamentPage";
-import {StakingPage} from "../../components2/B7_StakingPage/StakingPage";
+import {LootBoxesPage} from "../../components2/B3_LootBoxesPage/LootBoxesPage";
+import {ErrorPage} from "../../components2/B7_ErrorPage/ErrorPage";
+import {PlayPage} from "../../components2/B6_PlayPage/PlayPage";
+import {TournamentPage} from "../../components2/B2_TournamentPage/TournamentPage";
+import {StakingPage} from "../../components2/B8_StakingPage/StakingPage";
+import {LootBoxPage} from "../../components2/B4_LootBoxPage/LootBoxPage";
 
 export const AppContainer = () => {
     AOS.init();
@@ -27,6 +28,7 @@ export const AppContainer = () => {
                         <Route index element={<HomePage/>} />
                         <Route path="tournaments" element={<TournamentsPage/>}/>
                         <Route path="loot" element={<LootBoxesPage/>}/>
+                        <Route path="box" element={<LootBoxPage/>}/>
                         <Route path="error" element={<ErrorPage/>}/>
                         <Route path="play" element={<PlayPage/>}/>
                         <Route path="tournament" element={<TournamentPage/>}/>
