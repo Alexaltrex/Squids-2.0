@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/Squids-2.0/static/css/main.58bb58c9.chunk.css",
-    "main.js": "/Squids-2.0/static/js/main.5935f9f0.chunk.js",
-    "main.js.map": "/Squids-2.0/static/js/main.5935f9f0.chunk.js.map",
+    "main.css": "/Squids-2.0/static/css/main.e64f630b.chunk.css",
+    "main.js": "/Squids-2.0/static/js/main.470a295b.chunk.js",
+    "main.js.map": "/Squids-2.0/static/js/main.470a295b.chunk.js.map",
     "runtime-main.js": "/Squids-2.0/static/js/runtime-main.a2041fa4.js",
     "runtime-main.js.map": "/Squids-2.0/static/js/runtime-main.a2041fa4.js.map",
     "static/css/2.a96a3fda.chunk.css": "/Squids-2.0/static/css/2.a96a3fda.chunk.css",
-    "static/js/2.b1c6a649.chunk.js": "/Squids-2.0/static/js/2.b1c6a649.chunk.js",
-    "static/js/2.b1c6a649.chunk.js.map": "/Squids-2.0/static/js/2.b1c6a649.chunk.js.map",
+    "static/js/2.ed26c951.chunk.js": "/Squids-2.0/static/js/2.ed26c951.chunk.js",
+    "static/js/2.ed26c951.chunk.js.map": "/Squids-2.0/static/js/2.ed26c951.chunk.js.map",
     "index.html": "/Squids-2.0/index.html",
     "static/css/2.a96a3fda.chunk.css.map": "/Squids-2.0/static/css/2.a96a3fda.chunk.css.map",
-    "static/css/main.58bb58c9.chunk.css.map": "/Squids-2.0/static/css/main.58bb58c9.chunk.css.map",
-    "static/js/2.b1c6a649.chunk.js.LICENSE.txt": "/Squids-2.0/static/js/2.b1c6a649.chunk.js.LICENSE.txt",
+    "static/css/main.e64f630b.chunk.css.map": "/Squids-2.0/static/css/main.e64f630b.chunk.css.map",
+    "static/js/2.ed26c951.chunk.js.LICENSE.txt": "/Squids-2.0/static/js/2.ed26c951.chunk.js.LICENSE.txt",
+    "static/media/0.273aa2ff.gif": "/Squids-2.0/static/media/0.273aa2ff.gif",
     "static/media/Anatoly-Hover.9362e553.png": "/Squids-2.0/static/media/Anatoly-Hover.9362e553.png",
     "static/media/Anatoly-Idle.5a44aa90.png": "/Squids-2.0/static/media/Anatoly-Idle.5a44aa90.png",
     "static/media/Dimi-Hover.852fd17e.png": "/Squids-2.0/static/media/Dimi-Hover.852fd17e.png",
@@ -24,6 +25,10 @@
     "static/media/Mod-Idle.b3848ce5.png": "/Squids-2.0/static/media/Mod-Idle.b3848ce5.png",
     "static/media/Theo-Hover.91aaacf0.png": "/Squids-2.0/static/media/Theo-Hover.91aaacf0.png",
     "static/media/Theo-idle.2f84ba90.png": "/Squids-2.0/static/media/Theo-idle.2f84ba90.png",
+    "static/media/back dna desktop.75cda968.png": "/Squids-2.0/static/media/back dna desktop.75cda968.png",
+    "static/media/back dna mobile.862b74db.png": "/Squids-2.0/static/media/back dna mobile.862b74db.png",
+    "static/media/back lives desktop.7834cdc3.png": "/Squids-2.0/static/media/back lives desktop.7834cdc3.png",
+    "static/media/back lives mobile.e6c57ce3.png": "/Squids-2.0/static/media/back lives mobile.e6c57ce3.png",
     "static/media/burgerMenu2.module.scss": "/Squids-2.0/static/media/burger-menu-divider.dd9f474d.svg",
     "static/media/barrels.ceb21ad5.gif": "/Squids-2.0/static/media/barrels.ceb21ad5.gif",
     "static/media/burgerMenu.module.scss": "/Squids-2.0/static/media/burger-menu-back.c3e3a1e8.png",
@@ -56,13 +61,14 @@
     "static/media/team-back-air.59be4c6e.png": "/Squids-2.0/static/media/team-back-air.59be4c6e.png",
     "static/media/team-back-whithout-air.d6d60cc7.png": "/Squids-2.0/static/media/team-back-whithout-air.d6d60cc7.png",
     "static/media/card.module.scss": "/Squids-2.0/static/media/team-card-hover.37565df2.svg",
-    "static/media/tracksuit.913dcb13.gif": "/Squids-2.0/static/media/tracksuit.913dcb13.gif"
+    "static/media/tracksuit.913dcb13.gif": "/Squids-2.0/static/media/tracksuit.913dcb13.gif",
+    "static/media/tv.246a431c.png": "/Squids-2.0/static/media/tv.246a431c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a2041fa4.js",
     "static/css/2.a96a3fda.chunk.css",
-    "static/js/2.b1c6a649.chunk.js",
-    "static/css/main.58bb58c9.chunk.css",
-    "static/js/main.5935f9f0.chunk.js"
+    "static/js/2.ed26c951.chunk.js",
+    "static/css/main.e64f630b.chunk.css",
+    "static/js/main.470a295b.chunk.js"
   ]
 }
