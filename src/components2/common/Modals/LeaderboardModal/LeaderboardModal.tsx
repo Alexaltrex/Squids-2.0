@@ -6,11 +6,16 @@ import {setGameplayModal, setLeaderboardModal, setModal, setNickname} from "../.
 import {useOutsideClick} from "../../../../hooks/useOutsideClick";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {CloseButton} from "../CloseButton/CloseButton";
-import {svgIcons} from "../../../../assets/svg/svgIcons";
 import replayBtnMobile from "../../../../assets/png/buttons/watch replay/mobile.png";
 import replayBtnDesktop from "../../../../assets/png/buttons/watch replay/desktop.png";
 import {cards} from "./constants";
 import {desktopBreakPoint} from "../../../../constants";
+
+import modalMobile from "../../../../assets/png/modal/leaderboard/mobile.png";
+import modalDesktop from "../../../../assets/png/modal/leaderboard/desktop.png";
+import cardMobile from "../../../../assets/png/cards/leaderboard modal/mobile.png";
+import cardDesktop from "../../../../assets/png/cards/leaderboard modal/desktop.png";
+import playIcon from "../../../../assets/png/icons/play.png";
 
 export const LeaderboardModal = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -32,9 +37,10 @@ export const LeaderboardModal = () => {
 
                 <CloseButton onClick={onClose} className={style.closeButton}/>
 
-                <div className={style.back}>
-                    {matchDesktop ? svgIcons.leaderboardModalDesktop : svgIcons.leaderboardModalMobile}
-                </div>
+                <img className={style.back}
+                     src={matchDesktop ? modalDesktop : modalMobile}
+                     alt=""
+                />
 
                 <p className={style.title}>Leaderboard</p>
 
@@ -49,9 +55,11 @@ export const LeaderboardModal = () => {
                     {
                         cards.map(({nft, nickname, address, score, replays}, index) => (
                             <div className={style.card} key={index}>
-                                <div className={style.back}>
-                                    {matchDesktop ? svgIcons.leaderboardCardDesktop : svgIcons.leaderboardCardMobile}
-                                </div>
+
+                                <img className={style.cardBack}
+                                     src={matchDesktop ? cardDesktop : cardMobile}
+                                     alt=""
+                                />
 
                                 <div className={style.cardContent}>
 
@@ -81,10 +89,11 @@ export const LeaderboardModal = () => {
                                                         dispatch(setNickname(nickname));
                                                     }}
                                             >
-                                                <img src={matchDesktop ? replayBtnDesktop : replayBtnMobile} alt="" className={style.back}/>
+                                                <img src={matchDesktop ? replayBtnDesktop : replayBtnMobile} alt=""
+                                                     className={style.back}/>
                                                 <div className={style.replayBtnContent}>
                                                     <p className={style.btnText}>Watch replay</p>
-                                                    <span>{svgIcons.play}</span>
+                                                    <img src={playIcon} alt=""/>
                                                 </div>
                                             </button>
 

@@ -4,9 +4,13 @@ import {FC, useRef} from "react";
 import {useOutsideClick} from "../../../../hooks/useOutsideClick";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {CloseButton} from "../CloseButton/CloseButton";
-import {svgIcons} from "../../../../assets/svg/svgIcons";
+import numberCard from "../../../../assets/png/icons/numberCard.png";
 import bntMobile from "../../../../assets/png/buttons/accept/mobile.png";
 import bntDesktop from "../../../../assets/png/buttons/accept/desktop.png";
+import {desktopBreakPoint} from "../../../../constants";
+
+import backMobile from "../../../../assets/png/modal/warning modal/mobile.png";
+import backDesktop from "../../../../assets/png/modal/warning modal/desktop.png";
 
 const items = [
     "The fish text website will help a designer, a layout designer",
@@ -20,20 +24,23 @@ interface IWarningModal {
     onAccept: () => void
 }
 
-export const WarningModal:FC<IWarningModal> = ({onClose, onAccept}) => {
+export const WarningModal: FC<IWarningModal> = ({onClose, onAccept}) => {
     const ref = useRef<HTMLDivElement>(null);
 
     useOutsideClick(ref, onClose);
 
-    const matchDesktop = useMediaQuery('(min-width:1440px)');
+    const matchDesktop = useMediaQuery(`(min-width:${desktopBreakPoint}px)`);
 
     return (
         <div className={style.warningModal}>
             <div className={style.content} ref={ref}>
                 <CloseButton onClick={onClose} className={style.closeButton}/>
-                <div className={style.back}>
-                    {matchDesktop ? svgIcons.warningDesktop : svgIcons.warningMobile}
-                </div>
+
+                <img className={style.back}
+                     src={matchDesktop ? backMobile : backDesktop}
+                     alt=""
+                />
+
                 <p className={style.title}>Warning!</p>
 
                 <div className={style.items}>
@@ -41,7 +48,7 @@ export const WarningModal:FC<IWarningModal> = ({onClose, onAccept}) => {
                         items.map((item, index) => (
                             <div className={style.itemBlock}>
                                 <div className={style.numberWrapper}>
-                                    {svgIcons.numberCard}
+                                    <img src={numberCard} alt=""/>
                                     <span>{index + 1}</span>
                                 </div>
 

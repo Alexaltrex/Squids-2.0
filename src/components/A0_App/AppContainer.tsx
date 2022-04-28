@@ -15,6 +15,7 @@ import {PlayPage} from "../../components2/B6_PlayPage/PlayPage";
 import {TournamentPage} from "../../components2/B2_TournamentPage/TournamentPage";
 import {StakingPage} from "../../components2/B8_StakingPage/StakingPage";
 import {LootBoxPage} from "../../components2/B4_LootBoxPage/LootBoxPage";
+import {MarketplacePage} from "../../components2/B9_MarketplacePage/MarketplacePage";
 
 export const AppContainer = () => {
     AOS.init();
@@ -33,6 +34,7 @@ export const AppContainer = () => {
                         <Route path="play" element={<PlayPage/>}/>
                         <Route path="tournament" element={<TournamentPage/>}/>
                         <Route path="stacking" element={<StakingPage/>}/>
+                        <Route path="marketplace" element={<MarketplacePage/>}/>
                     </Route>
                 </Routes>
             </HashRouter>

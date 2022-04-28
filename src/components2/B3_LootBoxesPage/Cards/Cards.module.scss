@@ -34,10 +34,18 @@
     }
 
     .back {
+      display: block;
       position: absolute;
       z-index: 1;
       top: 0;
       left: 0;
+      width: 288px;
+      height: 442px;
+
+      @include desktop() {
+        width: 260px;
+        height: 479px;
+      }
     }
 
     .content {
@@ -47,16 +55,14 @@
       flex-direction: column;
 
       .icon {
+        display: block;
         align-self: center;
+        width: 120px;
+        height: 120px;
 
-        svg {
-          width: 120px;
-          height: 120px;
-
-          @include desktop() {
-            width: 142px;
-            height: 140px;
-          }
+        @include desktop() {
+          width: 142px;
+          height: 140px;
         }
       }
 

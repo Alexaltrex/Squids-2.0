@@ -6,11 +6,11 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import {CardItem} from "./CardItem/CardItem";
 import enterBtnMobile from "../../assets/png/buttons/tournaments card enter/mobile.png";
 import enterBtnDesktop from "../../assets/png/buttons/tournaments card enter/desktop.png";
-import {svgIcons} from "../../assets/svg/svgIcons";
 import {useAppDispatch} from "../../store/hooks";
 import { setLeaderboardModal, setModal } from "../../store/appSlice";
 import {useNavigate} from "react-router-dom";
 import {desktopBreakPoint} from "../../constants";
+import sandTimerIcon from "../../assets/png/icons/sandTimer.png";
 
 export const TournamentsPage = () => {
     const matchDesktop = useMediaQuery(`(min-width:${desktopBreakPoint}px)`);
@@ -28,17 +28,17 @@ export const TournamentsPage = () => {
                 matchDesktop ? navigate("/app2/tournament") : navigate("/app2/error")
             }
         },
-        {
-            title: "Tournament 2",
-            items: [
-                {title: "Enter price", value: "3 $DNA "},
-                {title: "Price pool", value: "10 $DNA "},
-                {title: "Participant", value: "5/500"},
-            ],
-            onClick: () => {
-                matchDesktop ? navigate("/app2/tournament") : navigate("/app2/error")
-            }
-        },
+        // {
+        //     title: "Tournament 2",
+        //     items: [
+        //         {title: "Enter price", value: "3 $DNA "},
+        //         {title: "Price pool", value: "10 $DNA "},
+        //         {title: "Participant", value: "5/500"},
+        //     ],
+        //     onClick: () => {
+        //         matchDesktop ? navigate("/app2/tournament") : navigate("/app2/error")
+        //     }
+        // },
     ];
 
     const dispatch = useAppDispatch();
@@ -90,10 +90,17 @@ export const TournamentsPage = () => {
                     }
                     <CardItem>
                         <>
+                            <p className={style.title}>Tournament 2</p>
+                            <p className={style.soon}>soon</p>
+                            <img className={style.sandTimer} src={sandTimerIcon} alt=""/>
+
+                        </>
+                    </CardItem>
+                    <CardItem>
+                        <>
                             <p className={style.title}>Tournament 3</p>
                             <p className={style.soon}>soon</p>
-                            <span className={style.sandTimer}>{svgIcons.sandTimer}</span>
-
+                            <img className={style.sandTimer} src={sandTimerIcon} alt=""/>
                         </>
                     </CardItem>
                 </div>

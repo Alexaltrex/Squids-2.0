@@ -1,6 +1,5 @@
 import * as React from "react";
 import style from "./ChooseTheCoinModal.module.scss";
-import {svgIcons} from "../../../../assets/svg/svgIcons";
 import {useRef} from "react";
 import {useOutsideClick} from "../../../../hooks/useOutsideClick";
 import {
@@ -14,6 +13,30 @@ import {useAppDispatch, useAppSelector} from "../../../../store/hooks";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {CloseButton} from "../CloseButton/CloseButton";
 import {TopButton} from "./TopButton/TopButton";
+import {desktopBreakPoint} from "../../../../constants";
+import {InputCustom} from "./InputCustom/InputCustom";
+import buyBtnDnaMobile from "../../../../assets/png/buttons/choose the coins/dna - buy/mobile.png";
+import buyBtnDnaDesktop from "../../../../assets/png/buttons/choose the coins/dna - buy/desktop.png";
+import clsx from "clsx";
+import backLivesMobile from "../../../../assets/png/choose the coin/back lives mobile.png";
+import backLivesDesktop from "../../../../assets/png/choose the coin/back lives desktop.png";
+import backDnaMobile from "../../../../assets/png/choose the coin/back dna mobile.png";
+import backDnaDesktop from "../../../../assets/png/choose the coin/back dna desktop.png";
+import heart from "../../../../assets/png/icons/heart.png";
+import {CardLives} from "./CardLives/CardLives";
+import compass from "../../../../assets/png/icons/compass.png";
+
+export interface ICardLives {
+    lives: number
+    value: number
+}
+
+const cards:ICardLives[]  = [
+    {lives: 5, value: 0.11},
+    {lives: 10, value: 0.11},
+    {lives: 20, value: 0.11},
+    {lives: 50, value: 0.11},
+];
 
 
 export const ChooseTheCoinModal = () => {
@@ -29,19 +52,37 @@ export const ChooseTheCoinModal = () => {
 
     useOutsideClick(ref, onClose);
 
-    const matchDesktop = useMediaQuery('(min-width:1440px)');
+    const matchDesktop = useMediaQuery(`(min-width:${desktopBreakPoint}px)`);
 
     const homeModalType = useAppSelector(selectHomeModalType);
 
     return (
         <div className={style.chooseTheCoinModal}>
-            <div className={style.content} ref={ref}>
+            <div className={clsx({
+                [style.content]: true,
+                [style.content_dna]: homeModalType === HomeModalEnum.dna,
+                [style.content_lives]: homeModalType === HomeModalEnum.lives,
+            })}
+                 ref={ref}
+            >
 
                 <CloseButton onClick={onClose} className={style.closeButton}/>
 
-                <div className={style.back}>
-                    {matchDesktop ? svgIcons.chooseTheCoinBackDesktop : svgIcons.chooseTheCoinBackMobile}
-                </div>
+                {
+                    homeModalType === HomeModalEnum.lives &&
+                    <img src={matchDesktop ? backLivesDesktop : backLivesMobile}
+                         alt=""
+                         className={style.backLives}
+                    />
+                }
+
+                {
+                    homeModalType === HomeModalEnum.dna &&
+                    <img src={matchDesktop ? backDnaDesktop : backDnaMobile}
+                         alt=""
+                         className={style.backDna}
+                    />
+                }
 
                 <p className={style.title}>Choose the coin</p>
 
@@ -55,6 +96,41 @@ export const ChooseTheCoinModal = () => {
                                onClick={() => dispatch(setHomeModalType(HomeModalEnum.lives))}
                     />
                 </div>
+
+                {
+                    homeModalType === HomeModalEnum.dna &&
+                    <div className={style.dnaContent}>
+                        <InputCustom/>
+
+                        <div className={style.totalBlock}>
+                            <p>total</p>
+                            <div>
+                                <p>2.384</p>
+                                <img src={compass} alt=""/>
+                            </div>
+                        </div>
+
+                        <button className={style.buyBtn}>
+                            <img src={matchDesktop ? buyBtnDnaDesktop : buyBtnDnaMobile} alt=""/>
+                            <p>BUY</p>
+                        </button>
+                    </div>
+                }
+
+                {
+                    homeModalType === HomeModalEnum.lives &&
+                    <div className={style.livesContent}>
+                        {
+                            matchDesktop && <img src={heart} alt=""  className={style.heartIcon}/>
+                        }
+
+                        {
+                            cards.map((card, index) => (
+                                <CardLives key={index} {...card}/>
+                            ))
+                        }
+                    </div>
+                }
 
 
             </div>

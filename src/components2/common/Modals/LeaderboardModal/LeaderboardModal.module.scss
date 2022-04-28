@@ -20,10 +20,18 @@
     }
 
     .back {
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
+      width: 320px;
+      height: 551px;
+
+      @include desktop() {
+        width: 693px;
+        height: 696px;
+      }
     }
 
     .closeButton {
@@ -86,6 +94,7 @@
       margin-top: 36px;
       height: 426px;
       overflow-y: auto;
+      overflow-x: hidden;
 
       @include desktop() {
         margin-left: 32px;
@@ -121,11 +130,19 @@
           margin-top: 16px;
         }
 
-        .back {
+        .cardBack {
+          display: block;
           position: absolute;
           top: 0;
           left: 0;
           z-index: 1;
+          width: 258px;
+          height: 201px;
+
+          @include desktop() {
+            width: 576px;
+            height: 139px;
+          }
         }
 
         .cardContent {
@@ -253,12 +270,11 @@
                     }
                   }
 
-                  span {
-                    @include onlyDesktop() {
+                  img {
+                    @include onlyDesktop(block) {
                       margin-left: 4px;
                       width: 20px;
                       height: 20px;
-                      @include center();
                     }
                   }
                 }

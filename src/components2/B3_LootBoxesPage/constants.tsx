@@ -11,6 +11,7 @@ export const boxes = [
         contain: [
             {icon: tokensIcon, name: "Tokens", percent: 20},
         ],
+        quantity: 1,
     },
     {
         label: "Rare",
@@ -20,25 +21,28 @@ export const boxes = [
             {icon: tokensIcon, name: "Tokens", percent: 30},
             {icon: whitelistIcon, name: "Whitelist", percent: 40},
         ],
+        quantity: 2,
     },
     {
         label: "Legendary",
-        price: 20,
+        price: 3,
         quality: 1,
         contain: [
             {icon: livesIcon, name: "Lives", percent: 25},
             {icon: whitelistIcon, name: "Whitelist", percent: 20},
             {icon: tokensIcon, name: "Tokens", percent: 35},
         ],
+        quantity: 5,
     },
     {
         label: "Epic",
-        price: 50,
+        price: 4,
         quality: 3,
         contain: [
             {icon: livesIcon, name: "Lives", percent: 40},
             {icon: whitelistIcon, name: "Whitelist", percent: 25},
             {icon: nftIcon, name: "NFT", percent: 35},
         ],
+        quantity: 8,
     },
 ];

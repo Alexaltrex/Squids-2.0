@@ -6,6 +6,10 @@ import {Rating} from "@mui/material";
 import {IVoteModalCard} from "../VoteModal";
 import btn from "../../../../../assets/png/buttons/vote modal card/desktop.png";
 
+import cardDefault from "../../../../../assets/png/cards/vote modal/default.png";
+import cardHover from "../../../../../assets/png/cards/vote modal/hover.png";
+import cardClick from "../../../../../assets/png/cards/vote modal/click.png";
+import voteModalCardIcon from "../../../../../assets/png/icons/vote modal card icon.png";
 
 export const VoteModalCard: FC<IVoteModalCard> = ({
                                                       gameName,
@@ -28,15 +32,17 @@ export const VoteModalCard: FC<IVoteModalCard> = ({
              onMouseDown={() => setMouseDown(true)}
              onMouseUp={() => setMouseDown(false)}
         >
-            <div className={style.back}>
-                {
-                    mouseDown
-                        ? svgIcons.voteModalCardClick
-                        : hover
-                        ? svgIcons.voteModalCardHover
-                        : svgIcons.voteModalCardDefault
-                }
-            </div>
+
+            <img className={style.back}
+                 src={
+                     mouseDown
+                         ? cardClick
+                         : hover
+                         ? cardHover
+                         : cardDefault
+                 }
+                 alt=""
+            />
 
             <div className={style.content}>
                 <Rating max={3}
@@ -47,7 +53,10 @@ export const VoteModalCard: FC<IVoteModalCard> = ({
                         className={style.rating}
                 />
 
-                <div className={style.icon}>{svgIcons.voteModalCardIcon}</div>
+                <img className={style.icon}
+                     src={voteModalCardIcon}
+                     alt=""
+                />
 
                 <p className={style.gameName}>{gameName}</p>
 

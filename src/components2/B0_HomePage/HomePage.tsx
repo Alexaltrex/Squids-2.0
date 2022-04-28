@@ -1,14 +1,23 @@
 import * as React from "react";
 import style from "./HomePage.module.scss";
-import {setModal, setTournamentsWarningModal} from "../../store/appSlice";
+import {setModal, setTestRecordingModal, setTournamentsWarningModal} from "../../store/appSlice";
 import {useAppDispatch} from "../../store/hooks";
 import {svgIcons} from "../../assets/svg/svgIcons";
 import {HomeCard} from "./HomeCard/HomeCard";
+import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+
+import btnDefault from "../../assets/png/buttons/enter/default.png";
+import btnHover from "../../assets/png/buttons/enter/hover.png";
+import btnClick from "../../assets/png/buttons/enter/click.png";
+import cardIcon0 from "../../assets/png/icons/home page/card icon 0.png";
+import cardIcon1 from "../../assets/png/icons/home page/card icon 1.png";
+import cardIcon2 from "../../assets/png/icons/home page/card icon 2.png";
+import cardIcon3 from "../../assets/png/icons/home page/card icon 3.png";
 
 export interface IHomeCard {
     label: string
     to: string
-    icon: JSX.Element
+    icon: string
     onClick: () => void
 }
 
@@ -19,7 +28,7 @@ export const HomePage = () => {
         {
             label: "Tournaments",
             to: "/app2",
-            icon: svgIcons.homeCardIcon0,
+            icon: cardIcon0,
             onClick: () => {
                 dispatch(setTournamentsWarningModal(true));
                 dispatch(setModal(true));
@@ -28,24 +37,27 @@ export const HomePage = () => {
         {
             label: "Loot Boxes",
             to: "/app2/loot",
-            icon: svgIcons.homeCardIcon1,
-            onClick: () => {},
+            icon: cardIcon1,
+            onClick: () => {
+            },
         },
         {
             label: "Whitelist Marketplace",
-            to: "/app2/wallet",
-            icon: svgIcons.homeCardIcon2,
-            onClick: () => {},
+            to: "/app2/marketplace",
+            icon: cardIcon2,
+            onClick: () => {
+            },
         },
         {
             label: "Test Recording",
-            to: "/app2/marketplace",
-            icon: svgIcons.homeCardIcon3,
-            onClick: () => {},
+            to: "/app2",
+            icon: cardIcon3,
+            onClick: () => {
+                dispatch(setTestRecordingModal(true));
+                dispatch(setModal(true));
+            },
         },
-    ]
-
-
+    ];
 
     return (
         <div className={style.homePage}>
@@ -58,6 +70,15 @@ export const HomePage = () => {
                         links.map((link, index) => <HomeCard key={index} {...link}/>)
                     }
                 </div>
+
+                <ButtonCustom width={192}
+                              height={80}
+                              className={style.enterBtn}
+                              imgDefault={btnDefault}
+                              imgHover={btnHover}
+                              imgClick={btnClick}
+                              onClick={() => console.log("click")}
+                />
             </div>
         </div>
     )

@@ -6,7 +6,12 @@ import {
     selectGameplayModal,
     selectLeaderboardModal,
     selectModal,
-    selectShowChooseTheCoinModal, selectStakingNftErrorModal, selectTournamentsWarningModal, selectVoteModal,
+    selectOpenBoxModal,
+    selectShowChooseTheCoinModal,
+    selectStakingNftErrorModal,
+    selectTestRecordingModal, selectTimeLeftModal, selectTournamentsModal,
+    selectTournamentsWarningModal,
+    selectVoteModal,
 } from "../../store/appSlice";
 import {Header2} from "../A1_Header2/Header2";
 import {BurgerMenu2} from "../A3_BurgerMenu2/BurgerMenu2";
@@ -20,6 +25,10 @@ import {StakingNftErrorModal} from "../common/Modals/StakingNftErrorModal/Stakin
 import {VoteModal} from "../common/Modals/VoteModal/VoteModal";
 import {svgIcons} from "../../assets/svg/svgIcons";
 import "./animations.scss";
+import {OpenBoxModal} from "../common/Modals/OpenBoxModal/OpenBoxModal";
+import {TestRecordingModal} from "../common/Modals/TestRecordingModal/TestRecordingModal";
+import {TimeLeftModal} from "../common/Modals/TimeLeftModal/TimeLeftModal";
+import {TournamentsModal} from "../common/Modals/TournamentsModal/TournamentsModal";
 
 export const App2Layout = () => {
     const showChooseTheCoinModal = useAppSelector(selectShowChooseTheCoinModal);
@@ -29,6 +38,10 @@ export const App2Layout = () => {
     const gameplayModal = useAppSelector(selectGameplayModal);
     const stakingNftErrorModal = useAppSelector(selectStakingNftErrorModal);
     const voteModal = useAppSelector(selectVoteModal);
+    const openBoxModal = useAppSelector(selectOpenBoxModal);
+    const testRecordingModal = useAppSelector(selectTestRecordingModal);
+    const timeLeftModal = useAppSelector(selectTimeLeftModal);
+    const tournamentsModal = useAppSelector(selectTournamentsModal);
 
     return (
         <div className={clsx({
@@ -45,6 +58,10 @@ export const App2Layout = () => {
             {gameplayModal && <GameplayModal/>}
             {stakingNftErrorModal && <StakingNftErrorModal/>}
             {voteModal && <VoteModal/>}
+            {openBoxModal && <OpenBoxModal/>}
+            {testRecordingModal && <TestRecordingModal/>}
+            {timeLeftModal && <TimeLeftModal/>}
+            {tournamentsModal && <TournamentsModal/>}
 
             <div className={style.gradient}/>
 

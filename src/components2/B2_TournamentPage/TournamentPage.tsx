@@ -1,10 +1,14 @@
 import * as React from "react";
 import style from "./TournamentPage.module.scss";
-import {svgIcons} from "../../assets/svg/svgIcons";
 import btn from "../../assets/png/buttons/tournament page card/desktop.png";
 import {useAppDispatch} from "../../store/hooks";
-import {setModal, setStakingNftErrorModal, setVoteModal} from "../../store/appSlice";
+import {setModal, setStakingNftErrorModal, setTournamentsModal, setVoteModal} from "../../store/appSlice";
 import {useNavigate} from "react-router-dom";
+
+import cardBack from "../../assets/png/cards/tournament page/desktop.png";
+import cardIcon0 from "../../assets/png/icons/tournament page/card icon 0.png";
+import cardIcon1 from "../../assets/png/icons/tournament page/card icon 1.png";
+import cardIcon2 from "../../assets/png/icons/tournament page/card icon 2.png";
 
 export const TournamentPage = () => {
     const userIsStakingNft = true;
@@ -16,7 +20,7 @@ export const TournamentPage = () => {
     const cards = [
         {
             title: "End in 3H:24M:24S",
-            icon: svgIcons.tournamentPageIcon0,
+            icon: cardIcon0,
             buttonLabel: "PLAY",
             onClick: () => {
                 if (!userIsStakingNft) {
@@ -29,13 +33,13 @@ export const TournamentPage = () => {
         },
         {
             title: "",
-            icon: svgIcons.tournamentPageIcon1,
+            icon: cardIcon1,
             buttonLabel: "STAKE YOUR NFT",
             onClick: () => navigate("/app2/stacking"),
         },
         {
             title: "Start in 3H:24M:24S",
-            icon: svgIcons.tournamentPageIcon1,
+            icon: cardIcon2,
             buttonLabel: "VOTE",
             onClick: () => {
                 if (!userIsStakingNft) {
@@ -44,6 +48,7 @@ export const TournamentPage = () => {
                 } else {
                     dispatch(setModal(true));
                     dispatch(setVoteModal(true));
+                    //dispatch(setTournamentsModal(true));
                 }
             },
         },
@@ -58,8 +63,13 @@ export const TournamentPage = () => {
                              className={style.card}
                         >
                             <p className={style.title}>{title}</p>
-                            <div className={style.back}>{svgIcons.tournamentPageCardBack}</div>
-                            <div className={style.icon}>{icon}</div>
+
+                            <img  className={style.back} src={cardBack} alt=""/>
+
+                            {/*<div className={style.icon}>{icon}</div>*/}
+
+                            <img  className={style.icon} src={icon} alt=""/>
+
                             <button className={style.btn}
                                     onClick={onClick}
                             >

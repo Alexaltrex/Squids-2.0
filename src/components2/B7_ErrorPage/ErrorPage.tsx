@@ -1,7 +1,7 @@
 import style from "./ErrorPage.module.scss"
-import {svgIcons} from "../../assets/svg/svgIcons";
 import btn from "../../assets/png/buttons/go back/button.png";
 import {useNavigate} from "react-router-dom";
+import tv from "../../assets/png/pages/error page/tv.png";
 
 export const ErrorPage = () => {
     const navigate = useNavigate();
@@ -9,9 +9,7 @@ export const ErrorPage = () => {
     return (
         <div className={style.errorPage}>
             <div className={style.content}>
-                <div>
-                    {svgIcons.monitor}
-                </div>
+                <img src={tv} alt="" className={style.tv}/>
 
                 <h2>Error</h2>
                 <p className={style.description}>Only PC users have the opportunity to take part in the tournament</p>

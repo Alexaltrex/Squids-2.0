@@ -15,9 +15,12 @@
       .field {
         position: relative;
 
-        .back {
+        .fieldBack {
+          display: block;
           position: relative;
           z-index: 1;
+          width: 862px;
+          height: 720px;
         }
 
         .frame {
@@ -60,11 +63,14 @@
       margin-left: 40px;
       position: relative;
 
-      .back {
+      .asideBack {
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 1;
+        width: 260px;
+        height: 817px;
       }
 
       .content {
@@ -148,9 +154,12 @@
               margin-top: 12px;
             }
 
-            .back {
+            .leaderboardCardBack {
+              display: block;
               position: absolute;
               z-index: 1;
+              width: 210px;
+              height: 62px;
             }
 
             .leaderboardCardContent {
@@ -241,11 +250,14 @@
               margin-top: 12px;
             }
 
-            .back {
+            .chatItemBack {
+              display: block;
               position: absolute;
               top: 0;
               left: 0;
               z-index: 1;
+              width: 236px;
+              height: 90px;
             }
 
             .nickname {
@@ -274,11 +286,14 @@
           width: 260px;
           height: 75px;
 
-          .back {
+          .formBack {
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
+            width: 260px;
+            height: 75px;
           }
 
           .chatFormContent {
@@ -315,7 +330,7 @@
               @include button();
               position: relative;
 
-              img {
+              img:nth-child(1) {
                 display: block;
                 width: 32px;
                 height: 32px;
@@ -323,11 +338,14 @@
                 z-index: 1;
               }
 
-              svg {
+              img:nth-child(2) {
+                display: block;
                 position: absolute;
                 z-index: 2;
                 top: 50%;
                 left: 50%;
+                width: 17.86px;
+                height: 17.86px;
                 transform: translate(-50%, -50%);
               }
 

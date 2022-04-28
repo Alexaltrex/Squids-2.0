@@ -1,0 +1,99 @@
+@import "../../../../assets/scss/app.scss";
+
+.tournamentsModal {
+  @include modal();
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 819px;
+    height: 368px;
+    box-sizing: border-box;
+    padding: 32px 32px 0;
+
+    .back {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 819px;
+      height: 368px;
+    }
+
+    .title {
+      position: relative;
+      z-index: 2;
+      @include modalTitle();
+    }
+
+    .description {
+      position: relative;
+      z-index: 2;
+      margin-top: 32px;
+      @include PressStart();
+      font-size: 20px;
+      line-height: 180%;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #000000;
+    }
+
+    .buttons {
+      margin-top: 32px;
+      display: flex;
+
+      button {
+        @include button();
+        position: relative;
+
+        img {
+          position: relative;
+          z-index: 1;
+          display: block;
+          width: 358px;
+          height: 75px;
+        }
+
+        p {
+          @include absoluteCenter();
+          z-index: 2;
+          @include PressStart();
+          font-size: 20px;
+          line-height: 160%;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+        }
+
+        span {
+          position: absolute;
+          z-index: 2;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -46px;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 150%;
+          color: #000000;
+        }
+
+        &:first-child p {
+          color: #548C24;
+        }
+
+        &:last-child {
+          margin-left: 40px;
+
+          p {
+            color: #9A1C1C;
+          }
+
+        }
+
+      }
+    }
+
+  }
+}

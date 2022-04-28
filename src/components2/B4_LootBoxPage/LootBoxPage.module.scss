@@ -35,8 +35,16 @@
       }
 
       .back {
+        display: block;
         position: relative;
         z-index: 1;
+        width: 288px;
+        height: 517px;
+
+        @include desktop() {
+          width: 848px;
+          height: 375px;
+        }
       }
 
       .content {
@@ -53,22 +61,13 @@
         }
 
         .icon {
+          display: block;
           width: 120px;
           height: 120px;
 
           @include desktop() {
             width: 300px;
             height: 300px;
-          }
-
-          svg {
-            width: 120px;
-            height: 120px;
-
-            @include desktop() {
-              width: 300px;
-              height: 300px;
-            }
           }
         }
 

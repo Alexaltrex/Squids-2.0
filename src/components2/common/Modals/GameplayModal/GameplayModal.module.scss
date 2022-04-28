@@ -19,11 +19,19 @@
       padding: 32px 0 0;
     }
 
-    .back {
+    .backModal {
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
+      width: 320px;
+      height: 617px;
+
+      @include desktop() {
+        width: 820px;
+        height: 788px;
+      }
     }
 
     .closeButton {
@@ -58,12 +66,17 @@
     }
 
     .field {
+      display: block;
       position: relative;
       z-index: 2;
       margin-top: 24px;
+      width: 288px;
+      height: 297px;
 
       @include desktop() {
         margin-top: 32px;
+        width: 756px;
+        height: 525px;
       }
     }
 

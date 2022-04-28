@@ -182,25 +182,10 @@
       }
 
       .sandTimer {
-        margin-top: 44px;
-        width: 140px;
-        height: 190px;
-
-        @include desktop() {
-          margin-top: 57px;
-          width: 164px;
-          height: 222px;
-        }
-
-        svg {
-          width: 140px;
-          height: 190px;
-
-          @include desktop() {
-            width: 164px;
-            height: 222px;
-          }
-        }
+        display: block;
+        margin-top: 24px;
+        width: 332px;
+        height: 265px;
       }
 
     }

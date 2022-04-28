@@ -1,13 +1,13 @@
 import {useRef} from "react";
 import {useAppDispatch} from "../../../../store/hooks";
-import {setModal, setStakingNftErrorModal, setVoteModal} from "../../../../store/appSlice";
+import {setModal, setVoteModal} from "../../../../store/appSlice";
 import {useOutsideClick} from "../../../../hooks/useOutsideClick";
 import * as React from "react";
 import style from "./VoteModal.module.scss"
 import {CloseButton} from "../CloseButton/CloseButton";
-import {svgIcons} from "../../../../assets/svg/svgIcons";
 import {VoteModalCard} from "./VoteModalCard/VoteModalCard";
 
+import modal from "../../../../assets/png/modal/vote/desktop.png";
 
 export interface IVoteModalCard {
     gameName: string
@@ -49,11 +49,10 @@ export const VoteModal = () => {
     return (
         <div className={style.voteModal}>
             <div className={style.content} ref={ref}>
+
                 <CloseButton onClick={onClose} className={style.closeButton}/>
 
-                <div className={style.back}>
-                    {svgIcons.voteModalBack}
-                </div>
+                <img className={style.back} src={modal} alt=""/>
 
                 <p className={style.title}>Stage 1</p>
 

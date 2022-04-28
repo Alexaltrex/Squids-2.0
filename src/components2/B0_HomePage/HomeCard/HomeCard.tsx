@@ -4,7 +4,9 @@ import style from "./HomeCard.module.scss";
 import {HashLink} from "react-router-hash-link";
 import * as React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import {svgIcons} from "../../../assets/svg/svgIcons";
+import backMobile from "../../../assets/png/cards/home page/mobile.png";
+import backDesktopDefault from "../../../assets/png/cards/home page/desktopDefault.png";
+import backDesktopHover from "../../../assets/png/cards/home page/desktopHover.png";
 
 export const HomeCard: FC<IHomeCard> = ({label, to, icon, onClick}) => {
     const [hover, setHover] = useState(false);
@@ -19,15 +21,23 @@ export const HomeCard: FC<IHomeCard> = ({label, to, icon, onClick}) => {
                   onMouseLeave={() => setHover(false)}
         >
             <div className={style.back}>
-                {
+                <img src={
                     !matchDesktop
-                        ? svgIcons.homeCardMobile
-                        : hover
-                            ? svgIcons.homeCardDesktopHover
-                            : svgIcons.homeCardDesktopDefault
+                    ? backMobile
+                    : hover
+                        ? backDesktopHover
+                        : backDesktopDefault
                 }
+                     alt=""
+                     className={style.back}
+                />
             </div>
-            <div className={style.icon}>{icon}</div>
+
+            {/*<div className={style.icon}>{icon}</div>*/}
+
+            <img className={style.icon} src={icon} alt=""/>
+
+
             <p className={style.label}>{label}</p>
         </HashLink>
     )

@@ -12,6 +12,12 @@
     flex-direction: column;
     align-items: center;
 
+    .tv {
+      display: block;
+      width: 196px;
+      height: 170px;
+    }
+
     h2 {
       margin-top: 24px;
       @include PressStart();

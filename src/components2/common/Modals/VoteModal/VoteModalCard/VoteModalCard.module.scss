@@ -6,10 +6,13 @@
   position: relative;
 
   .back {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    width: 288px;
+    height: 436px;
   }
 
   .content {
@@ -27,7 +30,10 @@
     }
 
     .icon {
+      display: block;
       margin-top: 24px;
+      width: 160px;
+      height: 102px;
     }
 
     .gameName {

@@ -3,13 +3,17 @@ import style from "./LootBoxPage.module.scss";
 import {useAppSelector} from "../../store/hooks";
 import {selectLootBox} from "../../store/appSlice";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import {svgIcons} from "../../assets/svg/svgIcons";
 import btnMobile from "../../assets/png/buttons/loot box open/mobile.png";
 import btnDesktop from "../../assets/png/buttons/loot box open/desktop.png";
+import {desktopBreakPoint} from "../../constants";
+
+import cardMobile from "../../assets/png/cards/loot box page/mobile.png";
+import cardDesktop from "../../assets/png/cards/loot box page/desktop.png";
+import lootBoxIcon from "../../assets/png/icons/loot boxes page card icon.png"
 
 export const LootBoxPage = () => {
     const lootBox = useAppSelector(selectLootBox);
-    const matchDesktop = useMediaQuery('(min-width:1440px)');
+    const matchDesktop = useMediaQuery(`(min-width:${desktopBreakPoint}px)`);
 
     return (
         <div className={style.lootBoxPage}>
@@ -20,15 +24,16 @@ export const LootBoxPage = () => {
                             <h2 className={style.title}>{`${lootBox.label} Box`}</h2>
 
                             <div className={style.card}>
-                                <div className={style.back}>
-                                    {
-                                        matchDesktop
-                                            ? svgIcons.lootBoxPageCardDesktop
-                                            : svgIcons.lootBoxPageCardMobile
-                                    }
-                                </div>
+
+                                <img className={style.back}
+                                     src={matchDesktop ? cardDesktop : cardMobile}
+                                     alt=""
+                                />
+
                                 <div className={style.content}>
-                                    <div className={style.icon}>{svgIcons.lootBoxesCardIcon}</div>
+
+                                    <img className={style.icon} src={lootBoxIcon} alt=""/>
+
                                     <div className={style.infoBlock}>
 
                                         <div className={style.qualityBox}>

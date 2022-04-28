@@ -1,6 +1,11 @@
+export enum TabEnum {
+    leaderboard = "leaderboard",
+    chat = "chat"
+}
+
 export const playPageTabs = [
-    "Leaderboard",
-    "chat"
+    TabEnum.leaderboard,
+    TabEnum.chat
 ];
 
 export const leaderboardCards = [

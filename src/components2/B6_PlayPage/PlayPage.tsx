@@ -1,21 +1,28 @@
 import * as React from "react";
 import style from "./PlayPage.module.scss";
-import {svgIcons} from "../../assets/svg/svgIcons";
 import btn from "../../assets/png/buttons/play/button.png";
 import {useState} from "react";
 import clsx from "clsx";
 import numberButton from "../../assets/png/buttons/numberButton.png";
-import {chatItems, leaderboardCards, playPageTabs} from "./constants";
+import {chatItems, leaderboardCards, playPageTabs, TabEnum} from "./constants";
 import {useFormik} from "formik";
 import buttonBack from "../../assets/png/buttons/numberButton.png";
+import {useAppDispatch} from "../../store/hooks";
+import {setGameplayModal, setModal, setTimeLeftModal} from "../../store/appSlice";
+
+import fieldBack from "../../assets/png/cards/play page/field.png";
+import asideBack from "../../assets/png/cards/play page/aside.png";
+import leaderboardCard from "../../assets/png/cards/play page/leaderboard card.png";
+import chatCard from "../../assets/png/cards/play page/chat card.png";
+import formBack from "../../assets/png/cards/play page/form.png";
+import sendIcon from "../../assets/png/icons/send.png";
 
 interface IValues {
     message: string
 }
 
-
 export const PlayPage = () => {
-    const [currentTab, setCurrentTab] = useState(0);
+    const [currentTab, setCurrentTab] = useState<TabEnum>(TabEnum.leaderboard);
 
     const initialValues: IValues = {
         message: "",
@@ -30,15 +37,27 @@ export const PlayPage = () => {
         onSubmit
     });
 
+    const dispatch = useAppDispatch();
+    const onClickHandler = () => {
+        dispatch(setModal(true));
+        dispatch(setTimeLeftModal(true))
+    };
+
     return (
         <div className={style.playPage}>
             <div className={style.inner}>
 
                 <div className={style.left}>
-                    <div className={style.field}>
-                        <div className={style.back}>{svgIcons.playPageField}</div>
+                    <div className={style.field}
+                         onClick={onClickHandler}
+                    >
+                        <img className={style.fieldBack}
+                             src={fieldBack}
+                             alt=""
+                        />
+
                         <iframe frameBorder={0}
-                                src="http://www.youtube.com/embed/xDMP3i36naA"
+                            //src="http://www.youtube.com/embed/xDMP3i36naA"
                                 className={style.frame}
                         />
                     </div>
@@ -49,7 +68,12 @@ export const PlayPage = () => {
                 </div>
 
                 <aside className={style.aside}>
-                    <div className={style.back}>{svgIcons.playPageAside}</div>
+
+                    <img className={style.asideBack}
+                         src={asideBack}
+                         alt=""
+                    />
+
                     <div className={style.content}>
                         <div className={style.tabs}>
                             {
@@ -57,9 +81,9 @@ export const PlayPage = () => {
                                     <button key={index}
                                             className={clsx({
                                                 [style.tab]: true,
-                                                [style.tab_current]: index === currentTab,
+                                                [style.tab_current]: tab === currentTab,
                                             })}
-                                            onClick={() => setCurrentTab(index)}
+                                            onClick={() => setCurrentTab(tab)}
                                     >
                                         {tab}
                                     </button>
@@ -69,15 +93,23 @@ export const PlayPage = () => {
                         </div>
 
                         {
-                            currentTab === 0 && (
+                            currentTab === TabEnum.leaderboard && (
                                 <>
                                     <div className={style.leaderboard}>
                                         {
                                             leaderboardCards.map(({address, score}, index) => (
                                                 <div className={style.leaderboardCard} key={index}>
-                                                    <div className={style.back}>{svgIcons.leaderboardCard}</div>
+
+                                                    <img className={style.leaderboardCardBack}
+                                                         src={leaderboardCard}
+                                                         alt=""/>
+
                                                     <div className={style.leaderboardCardContent}>
-                                                        <button>
+                                                        <button onClick={() => {
+                                                            dispatch(setModal(true));
+                                                            dispatch(setGameplayModal(true))
+                                                        }}
+                                                        >
                                                             <img src={numberButton} alt=""/>
                                                             <p>{index + 1}</p>
                                                         </button>
@@ -97,7 +129,7 @@ export const PlayPage = () => {
                         }
 
                         {
-                            currentTab === 1 && (
+                            currentTab === TabEnum.chat && (
                                 <>
                                     <div className={style.chat}>
                                         {
@@ -105,9 +137,12 @@ export const PlayPage = () => {
                                                 <div key={index}
                                                      className={style.chatItem}
                                                 >
-                                                    <div className={style.back}>
-                                                        {svgIcons.chatItemBack}
-                                                    </div>
+                                                    <img className={style.chatItemBack}
+                                                        src={chatCard}
+                                                        alt=""
+                                                    />
+
+
                                                     <p className={style.nickname}>{nickname}</p>
                                                     <p className={style.message}>{message}</p>
                                                 </div>
@@ -118,7 +153,12 @@ export const PlayPage = () => {
                                     <form className={style.form}
                                           onSubmit={formik.handleSubmit}
                                     >
-                                        <div className={style.back}>{svgIcons.chatForm}</div>
+
+                                        <img className={style.formBack}
+                                             src={formBack}
+                                             alt=""
+                                        />
+
                                         <div className={style.chatFormContent}>
                                             <input type="text"
                                                    placeholder="Write message"
@@ -126,7 +166,7 @@ export const PlayPage = () => {
                                             />
                                             <button type="submit">
                                                 <img src={buttonBack} alt=""/>
-                                                {svgIcons.send}
+                                                <img src={sendIcon} alt=""/>
                                             </button>
                                         </div>
                                     </form>

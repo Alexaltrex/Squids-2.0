@@ -20,10 +20,19 @@
     }
 
     .back {
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
+      width: 320px;
+      height: 474px;
+
+      @include desktop() {
+        width: 500px;
+        height: 472px;
+      }
+
     }
 
     .closeButton {
@@ -66,6 +75,12 @@
           position: relative;
           width: 43px;
           height: 43px;
+
+          img {
+            display: block;
+            width: 43px;
+            height: 43px;
+          }
 
           span {
             position: absolute;
