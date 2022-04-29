@@ -79,7 +79,7 @@ export const Header2: FC<IHeader2> = ({
                     <button className={style.burgerButton}
                             onClick={onBurgerClick}
                     >
-                        <img src={burgerOpen ? burgerIcon : closeBurgerIcon} alt=""/>
+                        <img src={burgerOpen ? closeBurgerIcon : burgerIcon} alt=""/>
                     </button>
                 </div>
             </div>

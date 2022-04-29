@@ -71,14 +71,14 @@ export const HomePage = () => {
                     }
                 </div>
 
-                <ButtonCustom width={192}
-                              height={80}
-                              className={style.enterBtn}
-                              imgDefault={btnDefault}
-                              imgHover={btnHover}
-                              imgClick={btnClick}
-                              onClick={() => console.log("click")}
-                />
+                {/*<ButtonCustom width={192}*/}
+                {/*              height={80}*/}
+                {/*              className={style.enterBtn}*/}
+                {/*              imgDefault={btnDefault}*/}
+                {/*              imgHover={btnHover}*/}
+                {/*              imgClick={btnClick}*/}
+                {/*              onClick={() => console.log("click")}*/}
+                {/*/>*/}
             </div>
         </div>
     )
