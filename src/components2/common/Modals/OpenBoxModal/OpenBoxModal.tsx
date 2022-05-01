@@ -16,6 +16,13 @@ import modalDesktop from "../../../../assets/png/modal/open box/desktop.png";
 import lootBoxIcon from "../../../../assets/png/icons/loot boxes page card icon.png";
 import btnMinus from "../../../../assets/png/icons/buttonMinus.png";
 import btnPlus from "../../../../assets/png/icons/buttonPlus.png";
+import {ButtonCustom} from "../../ButtonCustom/ButtonCustom";
+
+import imgMobileDefault from "../../../../assets/png/buttons/open box modal/purchase/mobileDefault.png";
+import imgMobileClick from "../../../../assets/png/buttons/open box modal/purchase/mobileClick.png";
+import imgDesktopDefault from "../../../../assets/png/buttons/open box modal/purchase/desktopDefault.png";
+import imgDesktopHover from "../../../../assets/png/buttons/open box modal/purchase/desktopHover.png";
+import imgDesktopClick from "../../../../assets/png/buttons/open box modal/purchase/desktopClick.png";
 
 export const OpenBoxModal = () => {
     const lootBox = useAppSelector(selectLootBox);
@@ -68,16 +75,20 @@ export const OpenBoxModal = () => {
                             <div className={style.row}>
                                 <p>Quantity:</p>
                                 <div className={style.buttonBlock}>
+
                                     <button onClick={() => setQuantity(quantity - 1)}
                                             disabled={quantity === 1}
                                     >
                                         <img src={btnMinus} alt=""/>
                                     </button>
+
                                     <p className={style.count}>{quantity}</p>
+
                                     <button onClick={() => setQuantity(quantity + 1)}
                                     >
                                         <img src={btnPlus} alt=""/>
                                     </button>
+
                                 </div>
                             </div>
 
@@ -86,10 +97,19 @@ export const OpenBoxModal = () => {
                                 <p>{`${lootBox.price * quantity} $DNA`}</p>
                             </div>
 
-                            <button className={style.purchaseBtn}>
-                                <img src={matchDesktop ? purchaseDesktop : purchaseMobile} alt=""/>
+                            <ButtonCustom className={style.purchaseBtn}
+                                          widthMobile={288}
+                                          heightMobile={75}
+                                          widthDesktop={436}
+                                          heightDesktop={75}
+                                          imgMobileDefault={imgMobileDefault}
+                                          imgMobileClick={imgMobileClick}
+                                          imgDesktopDefault={imgDesktopDefault}
+                                          imgDesktopHover={imgDesktopHover}
+                                          imgDesktopClick={imgDesktopClick}
+                            >
                                 <p>Purchase</p>
-                            </button>
+                            </ButtonCustom>
 
                         </div>
                     </div>

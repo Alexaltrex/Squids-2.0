@@ -78,25 +78,13 @@
     }
 
     .buyBtn {
-      @include button();
-      position: relative;
       margin-top: 15px;
 
       @include desktop() {
         margin-top: 32px;
       }
 
-      .buyBtnBack {
-        position: relative;
-        z-index: 1;
-        display: block;
-        width: 233px;
-        height: 40px;
-      }
-
       p {
-        @include absoluteCenter();
-        z-index: 2;
         @include buttonTextSmall();
         white-space: nowrap;
       }

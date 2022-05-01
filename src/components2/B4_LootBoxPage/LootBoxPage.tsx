@@ -3,13 +3,18 @@ import style from "./LootBoxPage.module.scss";
 import {useAppSelector} from "../../store/hooks";
 import {selectLootBox} from "../../store/appSlice";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import btnMobile from "../../assets/png/buttons/loot box open/mobile.png";
-import btnDesktop from "../../assets/png/buttons/loot box open/desktop.png";
 import {desktopBreakPoint} from "../../constants";
 
 import cardMobile from "../../assets/png/cards/loot box page/mobile.png";
 import cardDesktop from "../../assets/png/cards/loot box page/desktop.png";
 import lootBoxIcon from "../../assets/png/icons/loot boxes page card icon.png"
+import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+
+import imgMobileDefault from "../../assets/png/buttons/loot box open/imgMobileDefault.png";
+import imgMobileClick from "../../assets/png/buttons/loot box open/imgMobileClick.png";
+import imgDesktopDefault from "../../assets/png/buttons/loot box open/imgDesktopDefault.png";
+import imgDesktopHover from "../../assets/png/buttons/loot box open/imgDesktopHover.png";
+import imgDesktopClick from "../../assets/png/buttons/loot box open/imgDesktopClick.png";
 
 export const LootBoxPage = () => {
     const lootBox = useAppSelector(selectLootBox);
@@ -54,10 +59,19 @@ export const LootBoxPage = () => {
                                             }
                                         </div>
 
-                                        <button className={style.openBtn}>
-                                            <img src={matchDesktop ? btnDesktop : btnMobile} alt=""/>
+                                        <ButtonCustom className={style.openBtn}
+                                                      widthMobile={240}
+                                                      heightMobile={75}
+                                                      widthDesktop={360}
+                                                      heightDesktop={75}
+                                                      imgMobileDefault={imgMobileDefault}
+                                                      imgMobileClick={imgMobileClick}
+                                                      imgDesktopDefault={imgDesktopDefault}
+                                                      imgDesktopHover={imgDesktopHover}
+                                                      imgDesktopClick={imgDesktopClick}
+                                        >
                                             <p>open</p>
-                                        </button>
+                                        </ButtonCustom>
 
                                     </div>
                                 </div>

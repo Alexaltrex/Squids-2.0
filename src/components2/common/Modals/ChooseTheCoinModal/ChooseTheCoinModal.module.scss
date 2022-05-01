@@ -163,25 +163,8 @@
 
       .buyBtn {
         margin-top: 24px;
-        @include button();
-        position: relative;
-
-        img {
-          display: block;
-          position: relative;
-          z-index: 1;
-          width: 288px;
-          height: 48px;
-
-          @include desktop() {
-            width: 560px;
-            height: 75px;
-          }
-        }
 
         p {
-          @include absoluteCenter();
-          z-index: 2;
           @include PressStart();
           font-size: 12.8px;
           line-height: 160%;
@@ -192,10 +175,7 @@
             font-size: 20px;
           }
         }
-
       }
-
-
     }
 
     .livesContent {

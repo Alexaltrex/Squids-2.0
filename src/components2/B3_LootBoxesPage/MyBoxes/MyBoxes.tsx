@@ -1,12 +1,17 @@
 import style from "./MyBoxes.module.scss"
 import * as React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import openMobile from "../../../assets/png/buttons/loot boxes - open/mobile.png";
-import openDesktop from "../../../assets/png/buttons/loot boxes - open/desktop.png";
 import {boxes} from "../constants";
 import {useAppDispatch} from "../../../store/hooks";
-import { setLootBox } from "../../../store/appSlice";
+import {setLootBox} from "../../../store/appSlice";
 import {useNavigate} from "react-router-dom";
+import {ButtonCustom} from "../../common/ButtonCustom/ButtonCustom";
+
+import imgMobileDefault from "../../../assets/png/buttons/loot boxes page/open/mobileDefault.png";
+import imgMobileClick from "../../../assets/png/buttons/loot boxes page/open/mobileClick.png";
+import imgDesktopDefault from "../../../assets/png/buttons/loot boxes page/open/desktopDefault.png";
+import imgDesktopHover from "../../../assets/png/buttons/loot boxes page/open/desktopHover.png";
+import imgDesktopClick from "../../../assets/png/buttons/loot boxes page/open/desktopClick.png";
 
 export const MyBoxes = () => {
     const matchDesktop = useMediaQuery('(min-width:1440px)');
@@ -16,7 +21,7 @@ export const MyBoxes = () => {
     return (
         <div className={style.myBoxes}>
 
-            <h3 className={style.title}>My  boxes</h3>
+            <h3 className={style.title}>My boxes</h3>
 
             <div className={style.boxes}>
                 {
@@ -26,18 +31,26 @@ export const MyBoxes = () => {
                                 <p className={style.label}>{label}</p>
                                 <p className={style.value}>{quality}</p>
                             </div>
-                            <button className={style.openBtn}
-                                    onClick={() => {
-                                        navigate('/app2/box')
-                                        dispatch(setLootBox(boxes[index]));
-                                    }}
+
+                            <ButtonCustom className={style.openBtn}
+                                          onClick={() => {
+                                              navigate('/app2/box')
+                                              dispatch(setLootBox(boxes[index]));
+                                          }}
+                                          widthMobile={288}
+                                          heightMobile={40}
+                                          widthDesktop={260}
+                                          heightDesktop={40}
+                                          imgMobileDefault={imgMobileDefault}
+                                          imgMobileClick={imgMobileClick}
+                                          imgDesktopDefault={imgDesktopDefault}
+                                          imgDesktopHover={imgDesktopHover}
+                                          imgDesktopClick={imgDesktopClick}
+
                             >
-                                <img src={matchDesktop ? openDesktop : openMobile}
-                                     alt=""
-                                     className={style.back}
-                                />
                                 <p>open</p>
-                            </button>
+                            </ButtonCustom>
+
                         </div>
                     ))
                 }

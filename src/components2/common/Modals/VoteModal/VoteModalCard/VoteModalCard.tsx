@@ -4,12 +4,16 @@ import {FC, useState} from "react";
 import {svgIcons} from "../../../../../assets/svg/svgIcons";
 import {Rating} from "@mui/material";
 import {IVoteModalCard} from "../VoteModal";
-import btn from "../../../../../assets/png/buttons/vote modal card/desktop.png";
+
+import imgDefault from "../../../../../assets/png/buttons/vote modal - vote/default.png";
+import imgHover from "../../../../../assets/png/buttons/vote modal - vote/hover.png";
+import imgClick from "../../../../../assets/png/buttons/vote modal - vote/click.png";
 
 import cardDefault from "../../../../../assets/png/cards/vote modal/default.png";
 import cardHover from "../../../../../assets/png/cards/vote modal/hover.png";
 import cardClick from "../../../../../assets/png/cards/vote modal/click.png";
 import voteModalCardIcon from "../../../../../assets/png/icons/vote modal card icon.png";
+import {ButtonCustom} from "../../../ButtonCustom/ButtonCustom";
 
 export const VoteModalCard: FC<IVoteModalCard> = ({
                                                       gameName,
@@ -60,10 +64,19 @@ export const VoteModalCard: FC<IVoteModalCard> = ({
 
                 <p className={style.gameName}>{gameName}</p>
 
-                <button className={style.voteButton}>
-                    <img src={btn} alt=""/>
+                <ButtonCustom className={style.voteButton}
+                              widthMobile={240}
+                              heightMobile={40}
+                              widthDesktop={240}
+                              heightDesktop={40}
+                              imgMobileDefault={imgDefault}
+                              imgMobileClick={imgClick}
+                              imgDesktopDefault={imgDefault}
+                              imgDesktopHover={imgHover}
+                              imgDesktopClick={imgClick}
+                >
                     <p>vote</p>
-                </button>
+                </ButtonCustom>
 
                 <p className={style.votesCount}>{`${votesCount} votes`}</p>
             </div>

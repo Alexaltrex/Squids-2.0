@@ -139,28 +139,13 @@
           }
 
           .purchaseBtn {
-            @include button();
+
             position: absolute;
             left: 50%;
-            bottom: -45px;
+            bottom: -50px;
             transform: translateX(-50%);
 
-            img {
-              position: relative;
-              z-index: 1;
-              display: block;
-              width: 152px;
-              height: 75px;
-
-              @include desktop() {
-                width: 206px;
-                height: 75px;
-              }
-            }
-
             p {
-              @include absoluteCenter();
-              z-index: 2;
               @include PressStart();
               font-size: 14px;
               line-height: 160%;

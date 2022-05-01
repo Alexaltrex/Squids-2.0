@@ -80,7 +80,7 @@
           padding-top: 32px;
           box-sizing: border-box;
 
-          img {
+          .nftGif {
             display: block;
             width: 296px;
             height: 296px;
@@ -90,30 +90,16 @@
             margin-top: 74px;
             display: flex;
 
-            button {
-              position: relative;
-              @include button();
-              width: 139px;
-              height: 40px;
-
-              &:last-child {
-                margin-left: 20px;
-              }
-
-              img {
-                position: relative;
-                z-index: 1;
-                display: block;
-                width: 139px;
-                height: 40px;
-              }
+            .btnStaking {
+                &:last-child {
+                  margin-left: 20px;
+                }
 
               p {
-                @include absoluteCenter();
-                z-index: 2;
                 @include buttonTextSmall();
               }
             }
+
           }
         }
       }

@@ -68,37 +68,12 @@
 
       .openBtn {
         margin-top: 12px;
-        @include button();
-        position: relative;
-
-        img {
-          position: relative;
-          z-index: 1;
-          display: block;
-          width: 288px;
-          height: 40px;
-
-          @include desktop() {
-            width: 260px;
-          }
-        }
 
         p {
-          @include absoluteCenter();
-          z-index: 2;
-          @include PressStart();
-          font-size: 17px;
-          line-height: 160%;
-          letter-spacing: -0.02em;
-          text-transform: uppercase;
-          color: #715021;
+         @include buttonTextSmall();
         }
-
       }
     }
-
-
-
 
   }
 

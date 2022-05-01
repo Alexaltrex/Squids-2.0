@@ -6,13 +6,28 @@ import {selectNickname, setGameplayModal, setModal} from "../../../../store/appS
 import {useOutsideClick} from "../../../../hooks/useOutsideClick";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {CloseButton} from "../CloseButton/CloseButton";
-import {GameplayModalButton} from "./GameplayModalButton/GameplayModalButton";
 import {desktopBreakPoint} from "../../../../constants";
 
 import modalMobile from "../../../../assets/png/modal/gameplay/mobile.png";
 import modalDesktop from "../../../../assets/png/modal/gameplay/desktop.png";
 import fieldMobile from "../../../../assets/png/cards/gameplay modal field/mobile.png";
 import fieldDesktop from "../../../../assets/png/cards/gameplay modal field/desktop.png";
+import {ButtonCustom} from "../../ButtonCustom/ButtonCustom";
+
+//legit
+import imgMobileDefault from "../../../../assets/png/buttons/gameplay modal/legit/mobileDefault.png";
+import imgMobileClick from "../../../../assets/png/buttons/gameplay modal/legit/mobileClick.png";
+import imgDesktopDefault from "../../../../assets/png/buttons/gameplay modal/legit/desktopDefault.png";
+import imgDesktopHover from "../../../../assets/png/buttons/gameplay modal/legit/desktopHover.png";
+import imgDesktopClick from "../../../../assets/png/buttons/gameplay modal/legit/desktopClick.png";
+
+// cheating
+import mobileDefault from "../../../../assets/png/buttons/gameplay modal/cheating/mobileDefault.png";
+import mobileClick from "../../../../assets/png/buttons/gameplay modal/cheating/mobileClick.png";
+import desktopDefault from "../../../../assets/png/buttons/gameplay modal/cheating/desktopDefault.png";
+import desktopHover from "../../../../assets/png/buttons/gameplay modal/cheating/desktopHover.png";
+import desktopClick from "../../../../assets/png/buttons/gameplay modal/cheating/desktopClick.png";
+
 
 export const GameplayModal = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -50,8 +65,34 @@ export const GameplayModal = () => {
                 />
 
                 <div className={style.buttons}>
-                    <GameplayModalButton/>
-                    <GameplayModalButton first={false}/>
+                    <ButtonCustom className={style.legitBtn}
+                                  widthMobile={256}
+                                  heightMobile={75}
+                                  widthDesktop={288}
+                                  heightDesktop={75}
+                                  imgMobileDefault={imgMobileDefault}
+                                  imgMobileClick={imgMobileClick}
+                                  imgDesktopDefault={imgDesktopDefault}
+                                  imgDesktopHover={imgDesktopHover}
+                                  imgDesktopClick={imgDesktopClick}
+                    >
+                        <p>Legit</p>
+                    </ButtonCustom>
+
+                    <ButtonCustom className={style.cheatingBtn}
+                                  widthMobile={256}
+                                  heightMobile={75}
+                                  widthDesktop={288}
+                                  heightDesktop={75}
+                                  imgMobileDefault={mobileDefault}
+                                  imgMobileClick={mobileClick}
+                                  imgDesktopDefault={desktopDefault}
+                                  imgDesktopHover={desktopHover}
+                                  imgDesktopClick={desktopClick}
+                    >
+                        <p>Cheating</p>
+                    </ButtonCustom>
+
                 </div>
 
             </div>

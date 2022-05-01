@@ -43,55 +43,44 @@
 
     .buttons {
       margin-top: 32px;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 40px;
 
-      button {
-        @include button();
-        position: relative;
-
-        img {
-          position: relative;
-          z-index: 1;
-          display: block;
-          width: 358px;
-          height: 75px;
-        }
-
+      .btnYes, .btnNo {
         p {
-          @include absoluteCenter();
-          z-index: 2;
-          @include PressStart();
-          font-size: 20px;
-          line-height: 160%;
-          letter-spacing: -0.02em;
-          text-transform: uppercase;
+              @include PressStart();
+              font-size: 20px;
+              line-height: 160%;
+              letter-spacing: -0.02em;
+              text-transform: uppercase;
         }
+      }
 
-        span {
-          position: absolute;
-          z-index: 2;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -46px;
-          font-weight: 300;
-          font-size: 20px;
-          line-height: 150%;
-          color: #000000;
-        }
+      .btnYes p {
+        color: #548C24;
+      }
 
-        &:first-child p {
-          color: #548C24;
-        }
+      .btnNo p {
+        color: #9A1C1C;
+      }
+    }
 
-        &:last-child {
-          margin-left: 40px;
+    .votes {
+      align-self: stretch;
+      position: relative;
+      z-index: 2;
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 40px;
 
-          p {
-            color: #9A1C1C;
-          }
-
-        }
-
+      p {
+        text-align: center;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        color: #000000;
       }
     }
 

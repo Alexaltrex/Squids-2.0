@@ -1,6 +1,5 @@
 import * as React from "react";
 import style from "./PlayPage.module.scss";
-import btn from "../../assets/png/buttons/play/button.png";
 import {useState} from "react";
 import clsx from "clsx";
 import numberButton from "../../assets/png/buttons/numberButton.png";
@@ -16,6 +15,15 @@ import leaderboardCard from "../../assets/png/cards/play page/leaderboard card.p
 import chatCard from "../../assets/png/cards/play page/chat card.png";
 import formBack from "../../assets/png/cards/play page/form.png";
 import sendIcon from "../../assets/png/icons/send.png";
+import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+
+import imgDesktopDefault from "../../assets/png/buttons/play page - play/desktopDefault.png";
+import imgDesktopHover from "../../assets/png/buttons/play page - play/desktopHover.png";
+import imgDesktopClick from "../../assets/png/buttons/play page - play/desktopClick.png";
+
+import sendDefault from "../../assets/png/buttons/play page - send/default.png";
+import sendHover from "../../assets/png/buttons/play page - send/hover.png";
+import sendClick from "../../assets/png/buttons/play page - send/click.png";
 
 interface IValues {
     message: string
@@ -61,10 +69,21 @@ export const PlayPage = () => {
                                 className={style.frame}
                         />
                     </div>
-                    <button className={style.playBtn}>
-                        <img src={btn} alt=""/>
+
+                    <ButtonCustom className={style.playBtn}
+                                  widthMobile={861}
+                                  heightMobile={75}
+                                  widthDesktop={861}
+                                  heightDesktop={75}
+                                  imgMobileDefault={imgDesktopDefault}
+                                  imgMobileClick={imgDesktopClick}
+                                  imgDesktopDefault={imgDesktopDefault}
+                                  imgDesktopHover={imgDesktopHover}
+                                  imgDesktopClick={imgDesktopClick}
+                    >
                         <p>play</p>
-                    </button>
+                    </ButtonCustom>
+
                 </div>
 
                 <aside className={style.aside}>
@@ -164,10 +183,22 @@ export const PlayPage = () => {
                                                    placeholder="Write message"
                                                    {...formik.getFieldProps('message')}
                                             />
-                                            <button type="submit">
-                                                <img src={buttonBack} alt=""/>
-                                                <img src={sendIcon} alt=""/>
-                                            </button>
+
+                                            <ButtonCustom type="submit"
+                                                          className={style.sendBtn}
+                                                          widthMobile={32}
+                                                          heightMobile={32}
+                                                          widthDesktop={32}
+                                                          heightDesktop={32}
+                                                          imgMobileDefault={sendDefault}
+                                                          imgMobileClick={sendClick}
+                                                          imgDesktopDefault={sendDefault}
+                                                          imgDesktopHover={sendHover}
+                                                          imgDesktopClick={sendClick}
+                                            >
+                                                <img src={sendIcon} alt="" className={style.sendIcon}/>
+                                            </ButtonCustom>
+
                                         </div>
                                     </form>
 

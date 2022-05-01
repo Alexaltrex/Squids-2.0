@@ -25,13 +25,20 @@ import backDnaDesktop from "../../../../assets/png/choose the coin/back dna desk
 import heart from "../../../../assets/png/icons/heart.png";
 import {CardLives} from "./CardLives/CardLives";
 import compass from "../../../../assets/png/icons/compass.png";
+import {ButtonCustom} from "../../ButtonCustom/ButtonCustom";
+
+import imgMobileDefault from "../../../../assets/png/buttons/choose the coins - dna - buy/mobileDefault.png";
+import imgMobileClick from "../../../../assets/png/buttons/choose the coins - dna - buy/mobileClick.png";
+import imgDesktopDefault from "../../../../assets/png/buttons/choose the coins - dna - buy/desktopDefault.png";
+import imgDesktopHover from "../../../../assets/png/buttons/choose the coins - dna - buy/desktopHover.png";
+import imgDesktopClick from "../../../../assets/png/buttons/choose the coins - dna - buy/desktopClick.png";
 
 export interface ICardLives {
     lives: number
     value: number
 }
 
-const cards:ICardLives[]  = [
+const cards: ICardLives[] = [
     {lives: 5, value: 0.11},
     {lives: 10, value: 0.11},
     {lives: 20, value: 0.11},
@@ -110,10 +117,20 @@ export const ChooseTheCoinModal = () => {
                             </div>
                         </div>
 
-                        <button className={style.buyBtn}>
-                            <img src={matchDesktop ? buyBtnDnaDesktop : buyBtnDnaMobile} alt=""/>
+
+                        <ButtonCustom className={style.buyBtn}
+                                      widthMobile={288}
+                                      heightMobile={48}
+                                      widthDesktop={560}
+                                      heightDesktop={75}
+                                      imgMobileDefault={imgMobileDefault}
+                                      imgMobileClick={imgMobileClick}
+                                      imgDesktopDefault={imgDesktopDefault}
+                                      imgDesktopHover={imgDesktopHover}
+                                      imgDesktopClick={imgDesktopClick}
+                        >
                             <p>BUY</p>
-                        </button>
+                        </ButtonCustom>
                     </div>
                 }
 
@@ -121,7 +138,7 @@ export const ChooseTheCoinModal = () => {
                     homeModalType === HomeModalEnum.lives &&
                     <div className={style.livesContent}>
                         {
-                            matchDesktop && <img src={heart} alt=""  className={style.heartIcon}/>
+                            matchDesktop && <img src={heart} alt="" className={style.heartIcon}/>
                         }
 
                         {

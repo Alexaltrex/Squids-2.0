@@ -1,16 +1,27 @@
 import * as React from "react";
 import style from "./TournamentsPage.module.scss";
-import btnMobile from "../../assets/png/buttons/leaderboard/mobile.png";
-import btnDesktop from "../../assets/png/buttons/leaderboard/desktop.png";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {CardItem} from "./CardItem/CardItem";
-import enterBtnMobile from "../../assets/png/buttons/tournaments card enter/mobile.png";
-import enterBtnDesktop from "../../assets/png/buttons/tournaments card enter/desktop.png";
 import {useAppDispatch} from "../../store/hooks";
-import { setLeaderboardModal, setModal } from "../../store/appSlice";
+import {setLeaderboardModal, setModal} from "../../store/appSlice";
 import {useNavigate} from "react-router-dom";
 import {desktopBreakPoint} from "../../constants";
 import sandTimerIcon from "../../assets/png/icons/sandTimer.png";
+import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+
+// leaderboard
+import imgMobileDefault from "../../assets/png/buttons/tournaments page - leaderboard/mobileDefault.png";
+import imgMobileClick from "../../assets/png/buttons/tournaments page - leaderboard/mobileClick.png";
+import imgDesktopDefault from "../../assets/png/buttons/tournaments page - leaderboard/desktopDefault.png";
+import imgDesktopHover from "../../assets/png/buttons/tournaments page - leaderboard/desktopHover.png";
+import imgDesktopClick from "../../assets/png/buttons/tournaments page - leaderboard/desktopClick.png";
+
+// enter
+import mobileDefault from "../../assets/png/buttons/tournaments page - enter/mobileDefault.png";
+import mobileClick from "../../assets/png/buttons/tournaments page - enter/mobileClick.png";
+import desktopDefault from "../../assets/png/buttons/tournaments page - enter/desktopDefault.png";
+import desktopHover from "../../assets/png/buttons/tournaments page - enter/desktopHover.png";
+import desktopClick from "../../assets/png/buttons/tournaments page - enter/desktopClick.png";
 
 export const TournamentsPage = () => {
     const matchDesktop = useMediaQuery(`(min-width:${desktopBreakPoint}px)`);
@@ -53,12 +64,22 @@ export const TournamentsPage = () => {
 
                 <div className={style.titleBlock}>
                     <h2 className={style.title}>Tournaments</h2>
-                    <button className={style.btn}
-                            onClick={onLeaderboard}
+
+                    <ButtonCustom className={style.leaderboardBtn}
+                                  onClick={onLeaderboard}
+                                  widthMobile={287}
+                                  heightMobile={75}
+                                  widthDesktop={360}
+                                  heightDesktop={75}
+                                  imgMobileDefault={imgMobileDefault}
+                                  imgMobileClick={imgMobileClick}
+                                  imgDesktopDefault={imgDesktopDefault}
+                                  imgDesktopHover={imgDesktopHover}
+                                  imgDesktopClick={imgDesktopClick}
                     >
-                        <img src={matchDesktop ? btnDesktop : btnMobile} alt=""/>
-                        <span>Leaderboard</span>
-                    </button>
+                        <p>Leaderboard</p>
+                    </ButtonCustom>
+
                 </div>
 
                 <div className={style.cards}>
@@ -77,12 +98,22 @@ export const TournamentsPage = () => {
                                             ))
                                         }
                                     </div>
-                                    <button className={style.enterBtn}
-                                            onClick={card.onClick}
+
+                                    <ButtonCustom className={style.enterBtn}
+                                                  onClick={card.onClick}
+                                                  widthMobile={240}
+                                                  heightMobile={40}
+                                                  widthDesktop={294}
+                                                  heightDesktop={40}
+                                                  imgMobileDefault={mobileDefault}
+                                                  imgMobileClick={mobileClick}
+                                                  imgDesktopDefault={desktopDefault}
+                                                  imgDesktopHover={desktopHover}
+                                                  imgDesktopClick={desktopClick}
                                     >
-                                        <img src={matchDesktop ? enterBtnDesktop : enterBtnMobile} alt=""/>
-                                        <span>enter</span>
-                                    </button>
+                                        <p>enter</p>
+                                    </ButtonCustom>
+
                                 </>
                             </CardItem>
 

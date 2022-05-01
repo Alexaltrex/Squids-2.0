@@ -16,6 +16,13 @@ import modalDesktop from "../../../../assets/png/modal/leaderboard/desktop.png";
 import cardMobile from "../../../../assets/png/cards/leaderboard modal/mobile.png";
 import cardDesktop from "../../../../assets/png/cards/leaderboard modal/desktop.png";
 import playIcon from "../../../../assets/png/icons/play.png";
+import {ButtonCustom} from "../../ButtonCustom/ButtonCustom";
+
+import imgMobileDefault from "../../../../assets/png/buttons/leaderboard modal - watch replay/mobileDefault.png";
+import imgMobileClick from "../../../../assets/png/buttons/leaderboard modal - watch replay/mobileClick.png";
+import imgDesktopDefault from "../../../../assets/png/buttons/leaderboard modal - watch replay/desktopDefault.png";
+import imgDesktopHover from "../../../../assets/png/buttons/leaderboard modal - watch replay/desktopHover.png";
+import imgDesktopClick from "../../../../assets/png/buttons/leaderboard modal - watch replay/desktopClick.png";
 
 export const LeaderboardModal = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -82,20 +89,42 @@ export const LeaderboardModal = () => {
 
                                         <div className={style.buttonBlock}>
 
-                                            <button className={style.replayBtn}
-                                                    onClick={() => {
-                                                        dispatch(setLeaderboardModal(false));
-                                                        dispatch(setGameplayModal(true));
-                                                        dispatch(setNickname(nickname));
-                                                    }}
+                                            <ButtonCustom className={style.watchReplayBtn}
+                                                          onClick={() => {
+                                                              dispatch(setLeaderboardModal(false));
+                                                              dispatch(setGameplayModal(true));
+                                                              dispatch(setNickname(nickname));
+                                                          }}
+                                                          widthMobile={210}
+                                                          heightMobile={40}
+                                                          widthDesktop={311}
+                                                          heightDesktop={40}
+                                                          imgMobileDefault={imgMobileDefault}
+                                                          imgMobileClick={imgMobileClick}
+                                                          imgDesktopDefault={imgDesktopDefault}
+                                                          imgDesktopHover={imgDesktopHover}
+                                                          imgDesktopClick={imgDesktopClick}
                                             >
-                                                <img src={matchDesktop ? replayBtnDesktop : replayBtnMobile} alt=""
-                                                     className={style.back}/>
                                                 <div className={style.replayBtnContent}>
                                                     <p className={style.btnText}>Watch replay</p>
-                                                    <img src={playIcon} alt=""/>
+                                                    <img src={playIcon} alt="" className={style.icon}/>
                                                 </div>
-                                            </button>
+                                            </ButtonCustom>
+
+                                            {/*<button className={style.watchReplayBtn}*/}
+                                            {/*        onClick={() => {*/}
+                                            {/*            dispatch(setLeaderboardModal(false));*/}
+                                            {/*            dispatch(setGameplayModal(true));*/}
+                                            {/*            dispatch(setNickname(nickname));*/}
+                                            {/*        }}*/}
+                                            {/*>*/}
+                                            {/*    <img src={matchDesktop ? replayBtnDesktop : replayBtnMobile} alt=""*/}
+                                            {/*         className={style.back}/>*/}
+                                            {/*    <div className={style.replayBtnContent}>*/}
+                                            {/*        <p className={style.btnText}>Watch replay</p>*/}
+                                            {/*        <img src={playIcon} alt=""/>*/}
+                                            {/*    </div>*/}
+                                            {/*</button>*/}
 
                                             <div className={style.buttonBlockInfo}>
                                                 <p>{`${replays} Replays left`}</p>

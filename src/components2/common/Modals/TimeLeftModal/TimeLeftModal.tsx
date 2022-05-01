@@ -6,11 +6,18 @@ import {setModal, setTimeLeftModal} from "../../../../store/appSlice";
 import {useOutsideClick} from "../../../../hooks/useOutsideClick";
 import "./animations.scss";
 import clsx from "clsx";
-import yes from "../../../../assets/png/buttons/time left modal/yes.png";
-import no from "../../../../assets/png/buttons/time left modal/no.png";
+
+import yesDefault from "../../../../assets/png/buttons/tournaments modal/yes/default.png";
+import yesHover from "../../../../assets/png/buttons/tournaments modal/yes/hover.png";
+import yesClick from "../../../../assets/png/buttons/tournaments modal/yes/click.png";
+
+import noDefault from "../../../../assets/png/buttons/tournaments modal/no/default.png";
+import noHover from "../../../../assets/png/buttons/tournaments modal/no/hover.png";
+import noClick from "../../../../assets/png/buttons/tournaments modal/no/click.png";
 
 import modalBack from "../../../../assets/png/modal/time left.png";
 import heartIcon from "../../../../assets/png/icons/heart.png";
+import {ButtonCustom} from "../../ButtonCustom/ButtonCustom";
 
 export const TimeLeftModal = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -66,14 +73,36 @@ export const TimeLeftModal = () => {
                     </p>
 
                     <div className={style.buttons}>
-                        <button>
-                            <img src={yes} alt=""/>
+
+                        <ButtonCustom className={style.btnYes}
+                                      widthMobile={358}
+                                      heightMobile={75}
+                                      widthDesktop={358}
+                                      heightDesktop={75}
+                                      imgMobileDefault={yesDefault}
+                                      imgMobileClick={yesClick}
+                                      imgDesktopDefault={yesDefault}
+                                      imgDesktopHover={yesHover}
+                                      imgDesktopClick={yesClick}
+
+                        >
                             <p>yes</p>
-                        </button>
-                        <button>
-                            <img src={no} alt=""/>
+                        </ButtonCustom>
+
+                        <ButtonCustom className={style.btnNo}
+                                      widthMobile={358}
+                                      heightMobile={75}
+                                      widthDesktop={358}
+                                      heightDesktop={75}
+                                      imgMobileDefault={noDefault}
+                                      imgMobileClick={noClick}
+                                      imgDesktopDefault={noDefault}
+                                      imgDesktopHover={noHover}
+                                      imgDesktopClick={noClick}
+                        >
                             <p>no</p>
-                        </button>
+                        </ButtonCustom>
+
                     </div>
 
 

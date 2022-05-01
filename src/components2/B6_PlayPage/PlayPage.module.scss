@@ -36,25 +36,10 @@
       }
 
       .playBtn {
-        @include button();
         margin-top: 32px;
-        position: relative;
-
-        img {
-          position: relative;
-          z-index: 1;
-          display: block;
-          width: 861px;
-          height: 75px;
-        }
 
         p {
           @include buttonText();
-          position: absolute;
-          z-index: 2;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
         }
       }
     }
@@ -325,28 +310,14 @@
               }
             }
 
-            button {
+            .sendBtn {
               margin-left: 8px;
-              @include button();
-              position: relative;
 
-              img:nth-child(1) {
+              .sendIcon {
                 display: block;
-                width: 32px;
-                height: 32px;
-                position: relative;
-                z-index: 1;
-              }
-
-              img:nth-child(2) {
-                display: block;
-                position: absolute;
                 z-index: 2;
-                top: 50%;
-                left: 50%;
                 width: 17.86px;
                 height: 17.86px;
-                transform: translate(-50%, -50%);
               }
 
             }

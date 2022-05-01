@@ -168,35 +168,15 @@
 
           .openBtn {
             margin-top: 32px;
-            position: relative;
-            @include button();
-
-            img {
-              position: relative;
-              z-index: 1;
-              display: block;
-              width: 240px;
-              height: 75px;
-
-              @include desktop() {
-                width: 360px;
-                height: 75px;
-              }
-            }
 
             p {
-              @include absoluteCenter();
-              z-index: 2;
               @include PressStart();
               font-size: 20px;
               line-height: 160%;
               letter-spacing: -0.02em;
               text-transform: uppercase;
               color: #715021;
-
-              
             }
-
           }
 
         }

@@ -4,11 +4,16 @@ import {cards} from "./constants";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import {desktopBreakPoint} from "../../constants";
 import clsx from "clsx";
-import btnMobile from "../../assets/png/buttons/marketplace purchase/mobile.png";
-import btnDesktop from "../../assets/png/buttons/marketplace purchase/desktop.png";
 
 import cardMobile from "../../assets/png/cards/marketplace page/mobile.png";
 import cardDesktop from "../../assets/png/cards/marketplace page/desktop.png";
+import {ButtonCustom} from "../common/ButtonCustom/ButtonCustom";
+
+import imgMobileDefault from "../../assets/png/buttons/marketplace page/purchase/mobileDefault.png";
+import imgMobileClick from "../../assets/png/buttons/marketplace page/purchase/mobileClick.png";
+import imgDesktopDefault from "../../assets/png/buttons/marketplace page/purchase/desktopDefault.png";
+import imgDesktopHover from "../../assets/png/buttons/marketplace page/purchase/desktopHover.png";
+import imgDesktopClick from "../../assets/png/buttons/marketplace page/purchase/desktopClick.png";
 
 export const MarketplacePage = () => {
     const matchDesktop = useMediaQuery(`(min-width:${desktopBreakPoint}px)`);
@@ -46,10 +51,19 @@ export const MarketplacePage = () => {
                                         <p>{left}</p>
                                     </div>
 
-                                    <button className={style.purchaseBtn}>
-                                        <img src={matchDesktop ? btnDesktop : btnMobile} alt=""/>
+                                    <ButtonCustom className={style.purchaseBtn}
+                                                  widthMobile={152}
+                                                  heightMobile={75}
+                                                  widthDesktop={206}
+                                                  heightDesktop={75}
+                                                  imgMobileDefault={imgMobileDefault}
+                                                  imgMobileClick={imgMobileClick}
+                                                  imgDesktopDefault={imgDesktopDefault}
+                                                  imgDesktopHover={imgDesktopHover}
+                                                  imgDesktopClick={imgDesktopClick}
+                                    >
                                         <p>purchase</p>
-                                    </button>
+                                    </ButtonCustom>
 
                                 </div>
                             </div>

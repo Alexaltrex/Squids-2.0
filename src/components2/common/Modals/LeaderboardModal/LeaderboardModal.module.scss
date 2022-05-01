@@ -229,53 +229,30 @@
                 flex-direction: row;
               }
 
-              .replayBtn {
-                @include button();
-                @include rowCenter();
+              .replayBtnContent {
                 position: relative;
-                width: 210px;
-                height: 40px;
+                z-index: 2;
+                display: flex;
+                align-items: center;
 
-                @include desktop() {
-                  width: 311px;
-                }
-
-                .back {
-                  position: absolute;
-                  z-index: 1;
-                  width: 210px;
-                  height: 40px;
+                p {
+                  @include PressStart();
+                  font-size: 13px;
+                  line-height: 160%;
+                  letter-spacing: -0.02em;
+                  text-transform: uppercase;
+                  color: #715021;
 
                   @include desktop() {
-                    width: 311px;
+                    font-size: 17px;
                   }
                 }
 
-                .replayBtnContent {
-                  position: relative;
-                  z-index: 2;
-                  display: flex;
-                  align-items: center;
-
-                  p {
-                    @include PressStart();
-                    font-size: 13px;
-                    line-height: 160%;
-                    letter-spacing: -0.02em;
-                    text-transform: uppercase;
-                    color: #715021;
-
-                    @include desktop() {
-                      font-size: 17px;
-                    }
-                  }
-
-                  img {
-                    @include onlyDesktop(block) {
-                      margin-left: 4px;
-                      width: 20px;
-                      height: 20px;
-                    }
+                .icon {
+                  @include onlyDesktop(block) {
+                    margin-left: 4px;
+                    width: 20px;
+                    height: 20px;
                   }
                 }
               }

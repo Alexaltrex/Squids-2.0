@@ -9,8 +9,15 @@ import bntMobile from "../../../../assets/png/buttons/accept/mobile.png";
 import bntDesktop from "../../../../assets/png/buttons/accept/desktop.png";
 import {desktopBreakPoint} from "../../../../constants";
 
+import imgMobileDefault from "../../../../assets/png/buttons/warning modal - accept/mobileDefault.png";
+import imgMobileClick from "../../../../assets/png/buttons/warning modal - accept/mobileClick.png";
+import imgDesktopDefault from "../../../../assets/png/buttons/warning modal - accept/desktopDefault.png";
+import imgDesktopHover from "../../../../assets/png/buttons/warning modal - accept/desktopHover.png";
+import imgDesktopClick from "../../../../assets/png/buttons/warning modal - accept/desktopClick.png";
+
 import backMobile from "../../../../assets/png/modal/warning modal/mobile.png";
 import backDesktop from "../../../../assets/png/modal/warning modal/desktop.png";
+import {ButtonCustom} from "../../ButtonCustom/ButtonCustom";
 
 const items = [
     "The fish text website will help a designer, a layout designer",
@@ -58,12 +65,20 @@ export const WarningModal: FC<IWarningModal> = ({onClose, onAccept}) => {
                     }
                 </div>
 
-                <button className={style.acceptButton}
-                        onClick={onAccept}
+                <ButtonCustom className={style.acceptButton}
+                              widthMobile={289}
+                              heightMobile={75}
+                              widthDesktop={426}
+                              heightDesktop={75}
+                              imgMobileDefault={imgMobileDefault}
+                              imgMobileClick={imgMobileClick}
+                              imgDesktopDefault={imgDesktopDefault}
+                              imgDesktopHover={imgDesktopHover}
+                              imgDesktopClick={imgDesktopClick}
+                              onClick={onAccept}
                 >
-                    <img src={matchDesktop ? bntDesktop : bntMobile} alt=""/>
                     <p>accept</p>
-                </button>
+                </ButtonCustom>
 
             </div>
         </div>

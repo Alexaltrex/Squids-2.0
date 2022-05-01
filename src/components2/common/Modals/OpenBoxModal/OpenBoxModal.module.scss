@@ -163,29 +163,13 @@
       }
 
       .purchaseBtn {
-        @include button();
-        position: relative;
         margin-top: 24px;
 
         @include desktop() {
           margin-top: 32px;
         }
 
-        img {
-          position: relative;
-          z-index: 1;
-          width: 288px;
-          height: 75px;
-
-          @include desktop() {
-            width: 436px;
-            height: 75px;
-          }
-        }
-
         p {
-          @include absoluteCenter();
-          z-index: 2;
           @include buttonText();
         }
       }

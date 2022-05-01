@@ -121,44 +121,28 @@
 
       .buttons {
         margin-top: 32px;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 40px;
 
-        button {
-          @include button();
-          position: relative;
-
-          img {
-            position: relative;
-            z-index: 1;
-            display: block;
-            width: 358px;
-            height: 75px;
-          }
-
+        .btnYes, .btnNo {
           p {
-            @include absoluteCenter();
-            z-index: 2;
             @include PressStart();
             font-size: 20px;
             line-height: 160%;
             letter-spacing: -0.02em;
             text-transform: uppercase;
           }
-
-          &:first-child p {
-            color: #548C24;
-          }
-
-          &:last-child {
-            margin-left: 40px;
-
-            p {
-              color: #9A1C1C;
-            }
-
-          }
-
         }
+
+        .btnYes p {
+          color: #548C24;
+        }
+
+        .btnNo p {
+          color: #9A1C1C;
+        }
+
       }
 
     }
